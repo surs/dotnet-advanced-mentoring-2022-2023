@@ -6,5 +6,6 @@ namespace BusinessLayer.Interfaces
     {
         CartAggregate GetCart(int id);
         void UpdateCart(CartAggregate cart);
+        void CreateCart(int id);
     }
 }

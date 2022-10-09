@@ -18,6 +18,11 @@ namespace BusinessLayer.Services
             _repository.UpdateCart(cart);
         }
 
+        public void CreateCart(int id)
+        {
+            _repository.CreateCart(id);
+        }
+
         public List<CartItem> GetCartItems(int cartId)
         {
             var cart = _repository.GetCart(cartId);

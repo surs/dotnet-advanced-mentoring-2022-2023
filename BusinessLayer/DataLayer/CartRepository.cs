@@ -14,6 +14,14 @@ namespace DataLayer
             _connectionString = config.GetConnectionString("cartingDb");
         }
 
+        public void CreateCart(int id)
+        {
+            var cart = new CartAggregate(id);
+            using var db = new LiteDatabase(_connectionString);
+            var cartCollection = db.GetCollection<CartAggregate>("carts");
+            cartCollection.Insert(cart);
+        }
+
         public CartAggregate GetCart(int id)
         {
             using var db = new LiteDatabase(_connectionString);

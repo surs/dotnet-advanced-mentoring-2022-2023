@@ -6,9 +6,16 @@
 
         public List<CartItem> CartItems { get; private set; }
 
-        public CartAggregate()
+        public CartAggregate(int id)
         {
+            Id = id;
             CartItems = new List<CartItem>();
+        }
+
+        public CartAggregate(int id, List<CartItem> cartItems)
+        {
+            Id = id;
+            CartItems = cartItems;
         }
 
         public void AddItem(Item item, int quantity)
