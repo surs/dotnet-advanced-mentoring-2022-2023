@@ -12,10 +12,10 @@
             CartItems = new List<CartItem>();
         }
 
-        public CartAggregate(int id, List<CartItem> cartItems)
+        public CartAggregate(int Id, List<CartItem> CartItems)
         {
-            Id = id;
-            CartItems = cartItems;
+            this.Id = Id;
+            this.CartItems = CartItems;
         }
 
         public void AddItem(Item item, int quantity)
