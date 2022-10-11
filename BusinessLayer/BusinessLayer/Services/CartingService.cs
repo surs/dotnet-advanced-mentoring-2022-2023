@@ -14,6 +14,11 @@ namespace BusinessLayer.Services
         public void AddItemToCart(int cartId, Item item, int quantity)
         {
             var cart = _repository.GetCart(cartId);
+            if (cart == null)
+            {
+                cart = _repository.CreateCart(cartId);                
+            }
+
             cart.AddItem(item, quantity);
             _repository.UpdateCart(cart);
         }
@@ -26,12 +31,21 @@ namespace BusinessLayer.Services
         public List<CartItem> GetCartItems(int cartId)
         {
             var cart = _repository.GetCart(cartId);
+            if (cart == null )
+            {
+                throw CartException.CartNotFound;
+            }
             return cart.CartItems;
         }
 
         public void RemoveItemFromCart(int cartId, Item item, int quantity)
         {
             var cart = _repository.GetCart(cartId);
+            if (cart == null)
+            {
+                throw CartException.CartNotFound;
+            }
+
             cart.RemoveItem(item, quantity);
             if (cart.CartItems.Any())
             {

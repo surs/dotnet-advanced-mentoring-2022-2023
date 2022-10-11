@@ -18,28 +18,32 @@ namespace DataLayer.Repositories
             _mapper = mapper;
         }
 
-        public void CreateCart(int id)
+        public CartAggregate CreateCart(int id)
         {            
             var cartDto = new CartDto { Id = id };
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
             if (cartCollection.Exists(dto => dto.Id == id))
             {
-                return;
+                cartDto = GetFromCollection(id, cartCollection);
+            }
+            else
+            {
+                cartCollection.Insert(cartDto);
             }
 
-            cartCollection.Insert(cartDto);
+            return _mapper.Map<CartAggregate>(cartDto);
         }
 
         public CartAggregate GetCart(int id)
         {
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
-            var cart = cartCollection.Query()
-                .Where(cart => cart.Id == id)
-                .SingleOrDefault();
+            CartDto cart = GetFromCollection(id, cartCollection);
             return _mapper.Map<CartAggregate>(cart);
         }
+
+        
 
         public void RemoveCart(CartAggregate cart)
         {
@@ -55,6 +59,13 @@ namespace DataLayer.Repositories
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
             cartCollection.Update(cartDto);
+        }
+
+        private static CartDto GetFromCollection(int id, ILiteCollection<CartDto> cartCollection)
+        {
+            return cartCollection.Query()
+                            .Where(cart => cart.Id == id)
+                            .SingleOrDefault();
         }
     }
 }
