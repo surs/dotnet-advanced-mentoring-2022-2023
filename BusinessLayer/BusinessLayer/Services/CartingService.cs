@@ -14,6 +14,12 @@ namespace BusinessLayer.Services
         }
         public void AddItemToCart(int cartId, Item item, int quantity)
         {
+            FluentValidation.Results.ValidationResult validationResult = Item.Validator.Validate(item);
+            if (!validationResult.IsValid)
+            {
+                throw new CartException(string.Join(Environment.NewLine, validationResult.Errors.Select(e => e.ErrorMessage)));
+            }
+
             var cart = _repository.GetCart(cartId);
             if (cart == null)
             {
