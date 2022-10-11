@@ -21,21 +21,24 @@ if (cartingService == null)
     return;
 }
 
+var cartId = 1;
 Console.WriteLine("Creating cart with id 1...");
-cartingService.CreateCart(1);
+cartingService.CreateCart(cartId);
 Console.WriteLine("Adding itemks to cart...");
-var item1 = new Item(1, "Apple", null, 1.00M);
-var item2 = new Item(2, "Orange", new Image("url", "alt"), 1.99M);
-cartingService.AddItemToCart(1, item1, 2);
-cartingService.AddItemToCart(1, item2, 3);
+var item1 = new Item(cartId, "Apple", null, 1.00M);
+var item2 = new Item(cartId, "Orange", new Image("url", "alt"), 1.99M);
+cartingService.AddItemToCart(cartId, item1, 2);
+cartingService.AddItemToCart(cartId, item2, 3);
 
 GetCartItems(cartingService);
 Console.WriteLine("Removing an apple...");
-cartingService.RemoveItemFromCart(1, item1, 1);
+cartingService.RemoveItemFromCart(cartId, item1, 1);
 GetCartItems(cartingService);
 Console.WriteLine("Removing all oranges...");
-cartingService.RemoveItemFromCart(1, item2, 3);
+cartingService.RemoveItemFromCart(cartId, item2, 3);
 GetCartItems(cartingService);
+
+cartingService.RemoveItemFromCart(cartId, item1, 2);
 
 static void GetCartItems(ICartingService? cartingService)
 {

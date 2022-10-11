@@ -33,7 +33,15 @@ namespace BusinessLayer.Services
         {
             var cart = _repository.GetCart(cartId);
             cart.RemoveItem(item, quantity);
-            _repository.UpdateCart(cart);
+            if (cart.CartItems.Any())
+            {
+                _repository.UpdateCart(cart);
+            }
+            else
+            {
+                _repository.RemoveCart(cart);
+            }
+            
         }
     }
 }

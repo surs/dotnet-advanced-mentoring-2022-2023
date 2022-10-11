@@ -1,23 +1,9 @@
 ﻿namespace BusinessLayer.Entities
 {
-    public sealed class CartAggregate
+    public sealed record CartAggregate(int Id, List<CartItem> CartItems)
     {
-        public int Id { get; set; }
-
-        public List<CartItem> CartItems { get; private set; }
-
-        public CartAggregate(int id)
-        {
-            Id = id;
-            CartItems = new List<CartItem>();
-        }
-
-        public CartAggregate(int Id, List<CartItem> CartItems)
-        {
-            this.Id = Id;
-            this.CartItems = CartItems;
-        }
-
+        public CartAggregate(int id) : this(id, new List<CartItem>()) { }
+        
         public void AddItem(Item item, int quantity)
         {
             var cartItem = CartItems.SingleOrDefault(ci => ci.Item.Id == item.Id);
@@ -45,7 +31,7 @@
             CartItems.Remove(cartItem);
             if (cartItem.Quantity - quantity <= 0)
             {
-                return ;
+                return;
             }
 
             cartItem = cartItem with { Quantity = cartItem.Quantity - quantity };

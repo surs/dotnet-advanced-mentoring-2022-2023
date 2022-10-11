@@ -41,6 +41,14 @@ namespace DataLayer.Repositories
             return _mapper.Map<CartAggregate>(cart);
         }
 
+        public void RemoveCart(CartAggregate cart)
+        {
+            var cartDto = _mapper.Map<CartDto>(cart);
+            using var db = new LiteDatabase(_connectionString);
+            var cartCollection = db.GetCollection<CartDto>("carts");
+            cartCollection.Delete(cartDto.Id);
+        }
+
         public void UpdateCart(CartAggregate cart)
         {
             var cartDto = _mapper.Map<CartDto>(cart);
