@@ -1,6 +1,6 @@
 ﻿namespace DataLayer.Dtos
 {
-    public class ImageDto
+    internal sealed class ImageDto
     {
         public string Url { get; set; }
 

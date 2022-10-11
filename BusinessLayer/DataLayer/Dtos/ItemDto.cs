@@ -1,6 +1,6 @@
 ﻿namespace DataLayer.Dtos
 {
-    public class ItemDto
+    internal sealed class ItemDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -11,7 +11,7 @@ using IHost host = Host.CreateDefaultBuilder(args)
     {
         services
         .RegisterBusinessLayer()
-        .RegisterDataLayer(context.Configuration);
+        .RegisterDataLayer();
     })
     .Build();
 

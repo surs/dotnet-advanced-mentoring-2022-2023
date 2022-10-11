@@ -2,7 +2,7 @@
 
 namespace DataLayer.Dtos
 {
-    public sealed class CartDto
+    internal sealed class CartDto
     {
         public int Id { get; set; }
 

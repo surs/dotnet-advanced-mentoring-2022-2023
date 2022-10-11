@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace DataLayer.Repositories
 {
-    internal class CartRepository : ICartRepository
+    internal sealed class CartRepository : ICartRepository
     {
         private readonly string _connectionString;
         private readonly IMapper _mapper;

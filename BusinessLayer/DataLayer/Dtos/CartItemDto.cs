@@ -1,8 +1,6 @@
-﻿using BusinessLayer.Entities;
-
-namespace DataLayer.Dtos
+﻿namespace DataLayer.Dtos
 {
-    public class CartItemDto
+    internal sealed class CartItemDto
     {
         public ItemDto Item { get; set; }
         public int Quantity { get; set; }
