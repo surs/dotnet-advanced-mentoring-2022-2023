@@ -1,6 +1,6 @@
-﻿using BusinessLayer.Entities;
+﻿using CartingService.BusinessLayer.Entities;
 
-namespace BusinessLayer.Interfaces
+namespace CartingService.BusinessLayer.Interfaces
 {
     public interface ICartingService
     {

@@ -1,4 +1,4 @@
-﻿namespace BusinessLayer.Entities
+﻿namespace CartingService.BusinessLayer.Entities
 {
     public sealed record CartItem(Item Item, int Quantity)
     {

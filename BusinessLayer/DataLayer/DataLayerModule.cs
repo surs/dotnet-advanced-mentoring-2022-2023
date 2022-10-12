@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLayer.Interfaces;
+using CartingService.BusinessLayer.Interfaces;
 using DataLayer.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

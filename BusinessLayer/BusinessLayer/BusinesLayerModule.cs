@@ -1,15 +1,14 @@
-﻿using BusinessLayer.Interfaces;
-using BusinessLayer.Services;
+﻿using CartingService.BusinessLayer.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BusinessLayer
+namespace CartingService.BusinessLayer
 {
     public static class BusinesLayerModule
     {
         public static IServiceCollection RegisterBusinessLayer(this IServiceCollection services)
         {
             services
-                .AddTransient<ICartingService, CartingService>();
+                .AddTransient<ICartingService, Services.CartingService>();
             return services;
         }
     }

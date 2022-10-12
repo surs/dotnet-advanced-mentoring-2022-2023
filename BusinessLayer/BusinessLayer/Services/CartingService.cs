@@ -1,8 +1,8 @@
-﻿using BusinessLayer.Entities;
-using BusinessLayer.Exceptions;
-using BusinessLayer.Interfaces;
+﻿using CartingService.BusinessLayer.Entities;
+using CartingService.BusinessLayer.Exceptions;
+using CartingService.BusinessLayer.Interfaces;
 
-namespace BusinessLayer.Services
+namespace CartingService.BusinessLayer.Services
 {
     internal sealed class CartingService : ICartingService
     {
@@ -23,7 +23,7 @@ namespace BusinessLayer.Services
             var cart = _repository.GetCart(cartId);
             if (cart == null)
             {
-                cart = _repository.CreateCart(cartId);                
+                cart = _repository.CreateCart(cartId);
             }
 
             cart.AddItem(item, quantity);
@@ -38,7 +38,7 @@ namespace BusinessLayer.Services
         public List<CartItem> GetCartItems(int cartId)
         {
             var cart = _repository.GetCart(cartId);
-            if (cart == null )
+            if (cart == null)
             {
                 throw CartException.CartNotFound;
             }
@@ -62,7 +62,7 @@ namespace BusinessLayer.Services
             {
                 _repository.RemoveCart(cart);
             }
-            
+
         }
     }
 }

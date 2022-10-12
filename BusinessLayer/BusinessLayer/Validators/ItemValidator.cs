@@ -1,7 +1,7 @@
-﻿using BusinessLayer.Entities;
+﻿using CartingService.BusinessLayer.Entities;
 using FluentValidation;
 
-namespace BusinessLayer.Validators
+namespace CartingService.BusinessLayer.Validators
 {
     internal class ItemValidator : AbstractValidator<Item>
     {

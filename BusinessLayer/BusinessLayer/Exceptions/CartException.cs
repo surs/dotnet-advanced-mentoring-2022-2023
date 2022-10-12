@@ -1,4 +1,4 @@
-﻿namespace BusinessLayer.Exceptions
+﻿namespace CartingService.BusinessLayer.Exceptions
 {
     public class CartException : Exception
     {

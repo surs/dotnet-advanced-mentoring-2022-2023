@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using BusinessLayer.Entities;
-using BusinessLayer.Interfaces;
+using CartingService.BusinessLayer.Entities;
+using CartingService.BusinessLayer.Interfaces;
 using DataLayer.Dtos;
 using LiteDB;
 using Microsoft.Extensions.Configuration;

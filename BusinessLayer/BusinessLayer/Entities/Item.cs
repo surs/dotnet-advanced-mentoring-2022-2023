@@ -1,7 +1,7 @@
-﻿using BusinessLayer.Validators;
+﻿using CartingService.BusinessLayer.Validators;
 using FluentValidation;
 
-namespace BusinessLayer.Entities
+namespace CartingService.BusinessLayer.Entities
 {
     public sealed record Item(int Id, string Name, Image? Image, decimal Price)
     {

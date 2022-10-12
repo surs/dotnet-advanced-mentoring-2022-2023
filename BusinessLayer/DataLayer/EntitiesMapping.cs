@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLayer.Entities;
+using CartingService.BusinessLayer.Entities;
 using DataLayer.Dtos;
 
 namespace DataLayer

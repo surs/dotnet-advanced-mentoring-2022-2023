@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{4188861C-27F8-4767-9501-F07527D1BBC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.BusinessLayer", "BusinessLayer\CartingService.BusinessLayer.csproj", "{4188861C-27F8-4767-9501-F07527D1BBC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{66825430-9B98-4DCF-B53C-B311300D964E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{66825430-9B98-4DCF-B53C-B311300D964E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInterface", "ConsoleInterface\ConsoleInterface.csproj", "{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleInterface", "ConsoleInterface\ConsoleInterface.csproj", "{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartingService", "CartingService", "{03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4188861C-27F8-4767-9501-F07527D1BBC5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
+		{66825430-9B98-4DCF-B53C-B311300D964E} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
+		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C0668E2-EAD5-445E-A603-A77E0DB186CB}

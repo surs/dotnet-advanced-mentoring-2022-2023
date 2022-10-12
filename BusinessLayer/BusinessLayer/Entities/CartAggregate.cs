@@ -1,16 +1,16 @@
-﻿namespace BusinessLayer.Entities
+﻿namespace CartingService.BusinessLayer.Entities
 {
     public sealed record CartAggregate(int Id, List<CartItem> CartItems)
     {
         public CartAggregate(int id) : this(id, new List<CartItem>()) { }
-        
+
         public void AddItem(Item item, int quantity)
         {
             var cartItem = CartItems.SingleOrDefault(ci => ci.Item.Id == item.Id);
             if (cartItem != null)
             {
                 CartItems.Remove(cartItem);
-                cartItem = cartItem with { Quantity = cartItem.Quantity + quantity };                
+                cartItem = cartItem with { Quantity = cartItem.Quantity + quantity };
             }
             else
             {
