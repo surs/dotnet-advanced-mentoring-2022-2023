@@ -1,17 +1,15 @@
-﻿using AutoMapper;
-using CartingService.BusinessLayer.Interfaces;
-using DataLayer.Repositories;
-using Microsoft.Extensions.Configuration;
+﻿using CartingService.BusinessLayer.Interfaces;
+using CartingService.DataLayer.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DataLayer
+namespace CartingService.DataLayer
 {
     public static class DataLayerModule
     {
         public static IServiceCollection RegisterDataLayer(this IServiceCollection services)
         {
             services.AddTransient<ICartRepository, CartRepository>();
-            services.AddSingleton<IMapper>(_ => EntitiesMapping.ConfigureAndCreateMapper());
+            services.AddSingleton(_ => EntitiesMapping.ConfigureAndCreateMapper());
 
             return services;
         }

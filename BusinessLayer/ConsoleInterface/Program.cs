@@ -1,10 +1,10 @@
 ﻿using CartingService.BusinessLayer.Entities;
-using DataLayer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using CartingService.BusinessLayer;
 using CartingService.BusinessLayer.Interfaces;
+using CartingService.DataLayer;
 
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>

@@ -1,4 +1,4 @@
-﻿namespace DataLayer.Dtos
+﻿namespace CartingService.DataLayer.Dtos
 {
     internal sealed class ItemDto
     {

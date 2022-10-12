@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\CartingService.BusinessLayer.csproj" />
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <ProjectReference Include="..\DataLayer\CartingService.DataLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

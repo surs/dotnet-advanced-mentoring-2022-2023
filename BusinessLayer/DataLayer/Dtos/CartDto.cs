@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataLayer.Dtos
+namespace CartingService.DataLayer.Dtos
 {
     internal sealed class CartDto
     {
@@ -13,6 +13,6 @@ namespace DataLayer.Dtos
             CartItems = new List<CartItemDto>();
         }
 
-        
+
     }
 }

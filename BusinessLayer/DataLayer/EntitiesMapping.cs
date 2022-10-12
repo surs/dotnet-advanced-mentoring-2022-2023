@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CartingService.BusinessLayer.Entities;
-using DataLayer.Dtos;
+using CartingService.DataLayer.Dtos;
 
-namespace DataLayer
+namespace CartingService.DataLayer
 {
     internal static class EntitiesMapping
     {

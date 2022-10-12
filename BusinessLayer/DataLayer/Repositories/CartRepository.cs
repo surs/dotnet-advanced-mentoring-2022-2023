@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using CartingService.BusinessLayer.Entities;
 using CartingService.BusinessLayer.Interfaces;
-using DataLayer.Dtos;
+using CartingService.DataLayer.Dtos;
 using LiteDB;
 using Microsoft.Extensions.Configuration;
 
-namespace DataLayer.Repositories
+namespace CartingService.DataLayer.Repositories
 {
     internal sealed class CartRepository : ICartRepository
     {
@@ -19,7 +19,7 @@ namespace DataLayer.Repositories
         }
 
         public CartAggregate CreateCart(int id)
-        {            
+        {
             var cartDto = new CartDto { Id = id };
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
@@ -43,7 +43,7 @@ namespace DataLayer.Repositories
             return _mapper.Map<CartAggregate>(cart);
         }
 
-        
+
 
         public void RemoveCart(CartAggregate cart)
         {
