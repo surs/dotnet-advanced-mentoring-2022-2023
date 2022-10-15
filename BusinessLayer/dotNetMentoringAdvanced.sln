@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.ConsoleInter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartingService", "CartingService", "{03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogService", "CatalogService", "{86022755-4AF1-473A-90C3-08EA6ED6E714}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.BusinessLayer", "CatalogService.BusinessLayer\CatalogService.BusinessLayer.csproj", "{54360E56-6448-4BEC-B188-F5D2261506BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54360E56-6448-4BEC-B188-F5D2261506BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54360E56-6448-4BEC-B188-F5D2261506BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54360E56-6448-4BEC-B188-F5D2261506BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54360E56-6448-4BEC-B188-F5D2261506BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,7 @@ Global
 		{4188861C-27F8-4767-9501-F07527D1BBC5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
 		{66825430-9B98-4DCF-B53C-B311300D964E} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
 		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
+		{54360E56-6448-4BEC-B188-F5D2261506BC} = {86022755-4AF1-473A-90C3-08EA6ED6E714}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C0668E2-EAD5-445E-A603-A77E0DB186CB}
