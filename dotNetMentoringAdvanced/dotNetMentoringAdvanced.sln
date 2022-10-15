@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.BusinessLayer", "BusinessLayer\CartingService.BusinessLayer.csproj", "{4188861C-27F8-4767-9501-F07527D1BBC5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.DataLayer", "DataLayer\CartingService.DataLayer.csproj", "{66825430-9B98-4DCF-B53C-B311300D964E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.ConsoleInterface", "ConsoleInterface\CartingService.ConsoleInterface.csproj", "{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartingService", "CartingService", "{03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogService", "CatalogService", "{86022755-4AF1-473A-90C3-08EA6ED6E714}"
@@ -17,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.BusinessLaye
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.DataLayer", "CatalogService.DataLayer\CatalogService.DataLayer.csproj", "{E65042D0-D0F1-4B5F-95CC-92B1FCD788B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.ConsoleInterface", "CatalogService.ConsoleInterface\CatalogService.ConsoleInterface.csproj", "{8FF12800-F5AB-49FD-BA5D-840C0A487E41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.ConsoleInterface", "CatalogService.ConsoleInterface\CatalogService.ConsoleInterface.csproj", "{8FF12800-F5AB-49FD-BA5D-840C0A487E41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.BusinessLayer", "CartingService.BusinessLayer\CartingService.BusinessLayer.csproj", "{51A8534C-C93E-46E6-8652-7660309E1515}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.ConsoleInterface", "CartingService.ConsoleInterface\CartingService.ConsoleInterface.csproj", "{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.DataLayer", "CartingService.DataLayer\CartingService.DataLayer.csproj", "{9B9DDFEE-3DE6-466F-B61A-FA957FA20183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,18 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4188861C-27F8-4767-9501-F07527D1BBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4188861C-27F8-4767-9501-F07527D1BBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4188861C-27F8-4767-9501-F07527D1BBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4188861C-27F8-4767-9501-F07527D1BBC5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66825430-9B98-4DCF-B53C-B311300D964E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66825430-9B98-4DCF-B53C-B311300D964E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66825430-9B98-4DCF-B53C-B311300D964E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66825430-9B98-4DCF-B53C-B311300D964E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54360E56-6448-4BEC-B188-F5D2261506BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54360E56-6448-4BEC-B188-F5D2261506BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54360E56-6448-4BEC-B188-F5D2261506BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,17 +37,29 @@ Global
 		{8FF12800-F5AB-49FD-BA5D-840C0A487E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF12800-F5AB-49FD-BA5D-840C0A487E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF12800-F5AB-49FD-BA5D-840C0A487E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A8534C-C93E-46E6-8652-7660309E1515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A8534C-C93E-46E6-8652-7660309E1515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A8534C-C93E-46E6-8652-7660309E1515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A8534C-C93E-46E6-8652-7660309E1515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9DDFEE-3DE6-466F-B61A-FA957FA20183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9DDFEE-3DE6-466F-B61A-FA957FA20183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9DDFEE-3DE6-466F-B61A-FA957FA20183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9DDFEE-3DE6-466F-B61A-FA957FA20183}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4188861C-27F8-4767-9501-F07527D1BBC5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
-		{66825430-9B98-4DCF-B53C-B311300D964E} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
-		{4F080D2D-2266-4AE8-80B4-A6D11B2C3DE5} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
 		{54360E56-6448-4BEC-B188-F5D2261506BC} = {86022755-4AF1-473A-90C3-08EA6ED6E714}
 		{E65042D0-D0F1-4B5F-95CC-92B1FCD788B6} = {86022755-4AF1-473A-90C3-08EA6ED6E714}
 		{8FF12800-F5AB-49FD-BA5D-840C0A487E41} = {86022755-4AF1-473A-90C3-08EA6ED6E714}
+		{51A8534C-C93E-46E6-8652-7660309E1515} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
+		{C24CA3F8-B09F-4FFE-8C02-5A521AE44C8A} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
+		{9B9DDFEE-3DE6-466F-B61A-FA957FA20183} = {03CB2B30-2A27-48AA-A04B-01B2AF1E8ED9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C0668E2-EAD5-445E-A603-A77E0DB186CB}
