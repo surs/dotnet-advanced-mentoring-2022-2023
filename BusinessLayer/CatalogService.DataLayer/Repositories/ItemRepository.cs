@@ -1,38 +1,59 @@
-﻿using CatalogService.BusinessLayer.Entities;
+﻿using AutoMapper;
+using CatalogService.BusinessLayer.Entities;
 using CatalogService.BusinessLayer.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CatalogService.DataLayer.Interfaces;
+using Business = CatalogService.BusinessLayer.Entities;
+using Data = CatalogService.DataLayer.Model;
 
 namespace CatalogService.DataLayer.Repositories
 {
-    internal class ItemRepository : IItemRepository
+    internal sealed class ItemRepository : IItemRepository
     {
-        public Item AddItem(Item Item)
+        private readonly ICatalogContext _context;
+        private readonly IMapper _mapper;
+
+        public ItemRepository(ICatalogContext context, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _mapper = mapper;
+        }
+
+        public Business.Item AddItem(Business.Item item)
+        {
+            var itemDto = _mapper.Map<Data.Item>(item);
+            var newItem = _context.Items.Add(itemDto);
+            _context.SaveChanges();
+            return _mapper.Map<Business.Item>(newItem.Entity);
         }
 
         public bool DeleteItem(int id)
         {
-            throw new NotImplementedException();
+            var item = _context.Items.FirstOrDefault(c => c.Id == id);
+            if (item == null)
+            {
+                return false;
+            }
+
+            _context.Items.Remove(item);
+            _context.SaveChanges();
+            return true;
         }
 
-        public List<Item> GetAllCategories()
+        public List<Item> GetAllItems()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<List<Business.Item>>(_context.Items.ToList());
         }
 
-        public Item GetItem(int id)
+        public Business.Item GetItem(int id)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Business.Item>(_context.Items.FirstOrDefault(c => c.Id == id));
         }
 
-        public void UpdateItem(Item Item)
+        public bool UpdateItem(Item item)
         {
-            throw new NotImplementedException();
+            var entity = _context.Items.Update(_mapper.Map<Data.Item>(item));
+            _context.SaveChanges();
+            return entity != null;
         }
     }
 }

@@ -6,7 +6,7 @@ using Data = CatalogService.DataLayer.Model;
 
 namespace CatalogService.DataLayer.Repositories
 {
-    internal class CategoryRepository : ICategoryRepository
+    internal sealed class CategoryRepository : ICategoryRepository
     {
         private readonly ICatalogContext _context;
         private readonly IMapper _mapper;
@@ -43,14 +43,16 @@ namespace CatalogService.DataLayer.Repositories
             return _mapper.Map<List<Business.Category>>(_context.Categories.ToList());
         }
 
-        public Business.Category GetCategory(int id)
+        public Business.Category? GetCategory(int id)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Business.Category>(_context.Categories.FirstOrDefault(c => c.Id == id));
         }
 
         public bool UpdateCategory(Business.Category category)
         {
-            throw new NotImplementedException();
+            var entity = _context.Categories.Update(_mapper.Map<Data.Category>(category));
+            _context.SaveChanges();
+            return entity != null;
         }
 
         

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace CatalogService.DataLayer
 {
-    public class CatalogContext : DbContext, ICatalogContext
+    internal sealed class CatalogContext : DbContext, ICatalogContext
     {
         private readonly string _connectionString;
 

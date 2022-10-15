@@ -41,7 +41,7 @@ namespace CatalogService.BusinessLayer.Services
 
         public List<Item> GetCategories()
         {
-            return _itemRepository.GetAllCategories();
+            return _itemRepository.GetAllItems();
         }
 
         public Item GetItem(int id)
