@@ -8,6 +8,6 @@ namespace CatalogService.BusinessLayer.Interfaces
         List<Category> GetAllCategories();
         Category AddCategory(Category category);
         bool UpdateCategory(Category category);
-        bool DeleteCategory(int id);
+        bool DeleteCategory(int id);        
     }
 }

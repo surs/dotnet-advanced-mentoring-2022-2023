@@ -1,10 +1,11 @@
-﻿using CatalogService.DataLayer.Model;
+﻿using CatalogService.DataLayer.Interfaces;
+using CatalogService.DataLayer.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace CatalogService.DataLayer
 {
-    public class CatalogContext : DbContext
+    public class CatalogContext : DbContext, ICatalogContext
     {
         private readonly string _connectionString;
 
@@ -18,7 +19,12 @@ namespace CatalogService.DataLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(_connectionString);
+            options.UseSqlite(_connectionString);
+        }
+
+        void ICatalogContext.SaveChanges()
+        {
+            SaveChanges();
         }
     }
 }

@@ -1,38 +1,58 @@
-﻿using CatalogService.BusinessLayer.Entities;
+﻿using AutoMapper;
 using CatalogService.BusinessLayer.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CatalogService.DataLayer.Interfaces;
+using Business = CatalogService.BusinessLayer.Entities;
+using Data = CatalogService.DataLayer.Model;
 
 namespace CatalogService.DataLayer.Repositories
 {
     internal class CategoryRepository : ICategoryRepository
     {
-        public Category AddCategory(Category category)
+        private readonly ICatalogContext _context;
+        private readonly IMapper _mapper;
+
+        public CategoryRepository(ICatalogContext context, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _mapper = mapper;
+        }
+
+        public Business.Category AddCategory(Business.Category category)
+        {
+            var categoryDto =  _mapper.Map<Data.Category>(category);
+            var newCategory = _context.Categories.Add(categoryDto);
+            _context.SaveChanges();
+            return _mapper.Map<Business.Category>(newCategory.Entity);            
         }
 
         public bool DeleteCategory(int id)
         {
-            throw new NotImplementedException();
+            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
+            if (category == null)
+            {
+                return false;
+            }
+
+            _context.Categories.Remove(category);
+            _context.SaveChanges();
+            return true;
         }
 
-        public List<Category> GetAllCategories()
+        public List<Business.Category> GetAllCategories()
+        {
+            return _mapper.Map<List<Business.Category>>(_context.Categories.ToList());
+        }
+
+        public Business.Category GetCategory(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Category GetCategory(int id)
+        public bool UpdateCategory(Business.Category category)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateCategory(Category category)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
