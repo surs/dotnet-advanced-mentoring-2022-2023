@@ -37,7 +37,7 @@ namespace CatalogService.DataLayer.Migrations
 
                     b.HasIndex("ParentCategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("CatalogService.DataLayer.Model.Item", b =>
@@ -69,7 +69,7 @@ namespace CatalogService.DataLayer.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Items");
+                    b.ToTable("Items", (string)null);
                 });
 
             modelBuilder.Entity("CatalogService.DataLayer.Model.Category", b =>

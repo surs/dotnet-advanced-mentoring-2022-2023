@@ -33,6 +33,9 @@ namespace CatalogService.DataLayer.Repositories
                 return false;
             }
 
+            var childCategories = _context.Categories.Where(c => c.ParentCategoryId == id);
+            _context.Categories.RemoveRange(childCategories);
+
             _context.Categories.Remove(category);
             _context.SaveChanges();
             return true;
