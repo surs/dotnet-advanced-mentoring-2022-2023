@@ -3,6 +3,8 @@ using CatalogService.BusinessLayer.Entities;
 using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 
+var getSingleResource = new Func<int, string, string>((id, singleItemPath) => singleItemPath.Replace("{id}", id.ToString()));
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -30,8 +32,8 @@ const string singleItem = items + "/{id}";
 
 app.MapGet(categories, (ICategoryService categoryService) =>
 {
-    var result = categoryService.GetCategories();
-    return result;
+    var result = categoryService.GetCategories().Select(c => new { Category = c, href = getSingleResource(c.Id, singleCategory) });
+    return Results.Ok(result);
 });
 
 app.MapPost(categories, (Category category, ICategoryService categoryService) =>
@@ -39,7 +41,7 @@ app.MapPost(categories, (Category category, ICategoryService categoryService) =>
     try
     {
         var result = categoryService.AddCategory(category.Name, category.Image, category.ParentCategory);
-        var path = singleCategory.Replace("{id}", result.Id.ToString());
+        var path = getSingleResource(category.Id, singleCategory);
         return Results.Created(path, result);
     }
     catch(Exception e)
@@ -84,7 +86,7 @@ app.MapDelete(singleCategory, (int id, ICategoryService categoryService) =>
 
 app.MapGet(items, (IItemService itemService) =>
 {
-    var result = itemService.GetItems();
+    var result = itemService.GetItems().Select(i => new { Item = i, href = getSingleResource(i.Id, singleItem) });
     return Results.Ok(result);
 });
 
@@ -94,7 +96,7 @@ app.MapPost(items, (Item item, IItemService itemService) =>
     {
         var result = itemService.AddItem(item.Name, item.Description, 
             item.Image, item.Category, item.Price, item.Amount);
-        var path = singleItem.Replace("{id}", result.Id.ToString());
+        var path = getSingleResource(result.Id, singleItem);
         return Results.Created(path, result);
     }
     catch(Exception e)
