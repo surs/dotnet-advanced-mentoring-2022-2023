@@ -26,12 +26,15 @@ namespace CatalogService.DataLayer
                     .ForCtorParam(nameof(Business.Category.Image), o => o.MapFrom(s => s.ImageUrl))
                     .ForCtorParam(nameof(Business.Category.ParentCategory), o => o.MapFrom(s => s.ParentCategory ?? null));
 
-                cfg.CreateMap<Business.Item, Data.Item>();
+                cfg.CreateMap<Business.Item, Data.Item>()
+                    .ForMember(i => i.CategoryId, o => o.MapFrom(s => s.Category.Id))
+                    .ForMember(i => i.Category, o => o.Ignore());
+                
                 cfg.CreateMap<Data.Item, Business.Item>()
                         .ForCtorParam(nameof(Business.Item.Id), o => o.MapFrom(s => s.Id))
                         .ForCtorParam(nameof(Business.Item.Name), o => o.MapFrom(s => s.Name))
                         .ForCtorParam(nameof(Business.Item.Description), o => o.MapFrom(s => s.Description))
-                        .ForCtorParam(nameof(Business.Item.image), o => o.MapFrom(s => s.ImageUrl))
+                        .ForCtorParam(nameof(Business.Item.Image), o => o.MapFrom(s => s.ImageUrl))
                         .ForCtorParam(nameof(Business.Item.Category), o => o.MapFrom(s => s.Category))
                         .ForCtorParam(nameof(Business.Item.Price), o => o.MapFrom(s => s.Price))
                         .ForCtorParam(nameof(Business.Item.Amount), o => o.MapFrom(s => s.Amount));                

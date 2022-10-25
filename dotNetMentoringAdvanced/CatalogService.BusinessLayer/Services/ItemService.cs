@@ -24,7 +24,7 @@ namespace CatalogService.BusinessLayer.Services
             return _itemRepository.AddItem(Item);
         }
 
-        public Item AddItem(string name, string? description, Uri image, Category category, decimal price, int amount)
+        public Item AddItem(string name, string? description, Uri? image, Category category, decimal price, int amount)
         {
             var Item = new Item(0, name, description, image, category, price, amount);
             return AddItem(Item);
@@ -39,7 +39,7 @@ namespace CatalogService.BusinessLayer.Services
             }
         }
 
-        public List<Item> GetCategories()
+        public List<Item> GetItems()
         {
             return _itemRepository.GetAllItems();
         }
@@ -55,7 +55,7 @@ namespace CatalogService.BusinessLayer.Services
             return Item;
         }
 
-        public void UpdateItem(int id, string name, string? description, Uri image, Category category, decimal price, int amount)
+        public void UpdateItem(int id, string name, string? description, Uri? image, Category category, decimal price, int amount)
         {
             var Item = new Item(id, name, description, image, category, price, amount);
             _itemRepository.UpdateItem(Item);

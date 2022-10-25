@@ -23,11 +23,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
 const string categories = "/categories";
 const string singleCategory = categories + "/{id}";
 const string items = "/items";
@@ -87,20 +82,61 @@ app.MapDelete(singleCategory, (int id, ICategoryService categoryService) =>
     }
 });
 
-
-app.MapGet("/weatherforecast", () =>
+app.MapGet(items, (IItemService itemService) =>
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-       new WeatherForecast
-       (
-           DateTime.Now.AddDays(index),
-           Random.Shared.Next(-20, 55),
-           summaries[Random.Shared.Next(summaries.Length)]
-       ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    var result = itemService.GetItems();
+    return Results.Ok(result);
+});
+
+app.MapPost(items, (Item item, IItemService itemService) =>
+{
+    try
+    {
+        var result = itemService.AddItem(item.Name, item.Description, 
+            item.Image, item.Category, item.Price, item.Amount);
+        var path = singleItem.Replace("{id}", result.Id.ToString());
+        return Results.Created(path, result);
+    }
+    catch(Exception e)
+    {
+        return Results.BadRequest(e);
+    }
+});
+
+app.MapPut(singleItem, (int id, Item item, IItemService itemService) =>
+{
+    try
+    {
+        itemService.UpdateItem(id, item.Name, item.Description,
+            item.Image, item.Category, item.Price, item.Amount);
+        return Results.Ok();
+    }
+    catch (CatalogException e)
+    {
+        return Results.NotFound();
+    }
+    catch (Exception e)
+    {
+        return Results.BadRequest(e);
+    }
+});
+
+app.MapDelete(singleItem, (int id, IItemService itemService) =>
+{
+    try
+    {
+        itemService.DeleteItem(id);
+        return Results.Ok();
+    }
+    catch (CatalogException e)
+    {
+        return Results.NotFound();
+    }
+    catch (Exception e)
+    {
+        return Results.BadRequest(e);
+    }
+});
 
 app.Run();
 

@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using CatalogService.BusinessLayer.Entities;
+using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 using CatalogService.DataLayer.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Business = CatalogService.BusinessLayer.Entities;
 using Data = CatalogService.DataLayer.Model;
 
@@ -21,7 +23,14 @@ namespace CatalogService.DataLayer.Repositories
         public Business.Item AddItem(Business.Item item)
         {
             var itemDto = _mapper.Map<Data.Item>(item);
-            var newItem = _context.Items.Add(itemDto);
+            var category = _context.Categories.FirstOrDefault(c => c.Id == itemDto.CategoryId);
+            if (category == null)
+            {
+                throw new CatalogException("Category not found");
+            }
+
+            itemDto.Category = category;
+            var newItem = _context.Items.Add(itemDto); 
             _context.SaveChanges();
             return _mapper.Map<Business.Item>(newItem.Entity);
         }
@@ -41,7 +50,8 @@ namespace CatalogService.DataLayer.Repositories
 
         public List<Item> GetAllItems()
         {
-            return _mapper.Map<List<Business.Item>>(_context.Items.ToList());
+            var items = _context.Items.Include(i => i.Category).ToList();
+            return _mapper.Map<List<Business.Item>>(items);
         }
 
         public Business.Item GetItem(int id)

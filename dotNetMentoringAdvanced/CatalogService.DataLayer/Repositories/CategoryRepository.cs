@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CatalogService.BusinessLayer.Interfaces;
 using CatalogService.DataLayer.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Business = CatalogService.BusinessLayer.Entities;
 using Data = CatalogService.DataLayer.Model;
 
@@ -34,6 +35,8 @@ namespace CatalogService.DataLayer.Repositories
             }
 
             var childCategories = _context.Categories.Where(c => c.ParentCategoryId == id);
+            var items = _context.Items.Where(i => i.CategoryId == id || childCategories.Any(c => c.Id == i.CategoryId));
+            _context.Items.RemoveRange(items);
             _context.Categories.RemoveRange(childCategories);
 
             _context.Categories.Remove(category);
@@ -43,7 +46,8 @@ namespace CatalogService.DataLayer.Repositories
 
         public List<Business.Category> GetAllCategories()
         {
-            return _mapper.Map<List<Business.Category>>(_context.Categories.ToList());
+            var categories = _context.Categories.Include(c => c.ParentCategory).ToList();
+            return _mapper.Map<List<Business.Category>>(categories);
         }
 
         public Business.Category? GetCategory(int id)
