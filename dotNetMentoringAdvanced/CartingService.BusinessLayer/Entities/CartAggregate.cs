@@ -1,8 +1,8 @@
 ﻿namespace CartingService.BusinessLayer.Entities
 {
-    public sealed record CartAggregate(int Id, List<CartItem> CartItems)
+    public sealed record CartAggregate(Guid CartKey, List<CartItem> CartItems)
     {
-        public CartAggregate(int id) : this(id, new List<CartItem>()) { }
+        public CartAggregate(Guid cartKey) : this(cartKey, new List<CartItem>()) { }
 
         public void AddItem(Item item, int quantity)
         {

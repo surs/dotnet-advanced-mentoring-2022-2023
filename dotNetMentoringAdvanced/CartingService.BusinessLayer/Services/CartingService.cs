@@ -12,7 +12,7 @@ namespace CartingService.BusinessLayer.Services
         {
             _repository = repository;
         }
-        public void AddItemToCart(int cartId, Item item, int quantity)
+        public void AddItemToCart(Guid cartKey, Item item, int quantity)
         {
             FluentValidation.Results.ValidationResult validationResult = Item.Validator.Validate(item);
             if (!validationResult.IsValid)
@@ -20,24 +20,24 @@ namespace CartingService.BusinessLayer.Services
                 throw new CartException(string.Join(Environment.NewLine, validationResult.Errors.Select(e => e.ErrorMessage)));
             }
 
-            var cart = _repository.GetCart(cartId);
+            var cart = _repository.GetCart(cartKey);
             if (cart == null)
             {
-                cart = _repository.CreateCart(cartId);
+                cart = _repository.CreateCart(cartKey);
             }
 
             cart.AddItem(item, quantity);
             _repository.UpdateCart(cart);
         }
 
-        public void CreateCart(int id)
+        public void CreateCart(Guid cartKey)
         {
-            _repository.CreateCart(id);
+            _repository.CreateCart(cartKey);
         }
 
-        public List<CartItem> GetCartItems(int cartId)
+        public List<CartItem> GetCartItems(Guid cartKey)
         {
-            var cart = _repository.GetCart(cartId);
+            var cart = _repository.GetCart(cartKey);
             if (cart == null)
             {
                 throw CartException.CartNotFound;
@@ -45,14 +45,36 @@ namespace CartingService.BusinessLayer.Services
             return cart.CartItems;
         }
 
-        public void RemoveItemFromCart(int cartId, Item item, int quantity)
+        public void RemoveItemFromCart(Guid cartKey, Item item, int quantity)
         {
-            var cart = _repository.GetCart(cartId);
+            var cart = _repository.GetCart(cartKey);
             if (cart == null)
             {
                 throw CartException.CartNotFound;
             }
 
+            RemoveItem(item, quantity, cart);
+        }       
+
+        public void RemoveItemFromCart(Guid cartKey, int itemId, int quantity)
+        {
+            var cart = _repository.GetCart(cartKey);
+            if (cart == null)
+            {
+                throw CartException.CartNotFound;
+            }
+
+            var item = cart.CartItems.Where(i => i.Item.Id == itemId).FirstOrDefault();
+            if (item == null)
+            {
+                return;
+            }
+
+            RemoveItem(item.Item, quantity, cart);
+        }
+
+        private void RemoveItem(Item item, int quantity, CartAggregate cart)
+        {
             cart.RemoveItem(item, quantity);
             if (cart.CartItems.Any())
             {
@@ -62,7 +84,6 @@ namespace CartingService.BusinessLayer.Services
             {
                 _repository.RemoveCart(cart);
             }
-
         }
     }
 }

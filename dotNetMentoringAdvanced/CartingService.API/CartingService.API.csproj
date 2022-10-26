@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CartingService.BusinessLayer\CartingService.BusinessLayer.csproj" />
+    <ProjectReference Include="..\CartingService.DataLayer\CartingService.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>

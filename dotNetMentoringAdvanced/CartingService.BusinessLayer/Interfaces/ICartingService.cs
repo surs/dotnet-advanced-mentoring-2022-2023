@@ -4,9 +4,10 @@ namespace CartingService.BusinessLayer.Interfaces
 {
     public interface ICartingService
     {
-        void CreateCart(int id);
-        List<CartItem> GetCartItems(int id);
-        void AddItemToCart(int cartId, Item item, int quantity);
-        void RemoveItemFromCart(int cartId, Item item, int quantity);
+        void CreateCart(Guid cartKey);
+        List<CartItem> GetCartItems(Guid cartKey);
+        void AddItemToCart(Guid cartKey, Item item, int quantity);
+        void RemoveItemFromCart(Guid cartKey, Item item, int quantity);
+        void RemoveItemFromCart(Guid cartKey, int itemId, int quantity);
     }
 }

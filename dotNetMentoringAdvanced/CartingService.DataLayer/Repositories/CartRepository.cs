@@ -4,6 +4,7 @@ using CartingService.BusinessLayer.Interfaces;
 using CartingService.DataLayer.Dtos;
 using LiteDB;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace CartingService.DataLayer.Repositories
 {
@@ -18,14 +19,14 @@ namespace CartingService.DataLayer.Repositories
             _mapper = mapper;
         }
 
-        public CartAggregate CreateCart(int id)
+        public CartAggregate CreateCart(Guid cartKey)
         {
-            var cartDto = new CartDto { Id = id };
+            var cartDto = new CartDto { CartKey = cartKey };
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
-            if (cartCollection.Exists(dto => dto.Id == id))
+            if (cartCollection.Exists(dto => dto.CartKey == cartKey))
             {
-                cartDto = GetFromCollection(id, cartCollection);
+                cartDto = GetFromCollection(cartKey, cartCollection);
             }
             else
             {
@@ -35,22 +36,24 @@ namespace CartingService.DataLayer.Repositories
             return _mapper.Map<CartAggregate>(cartDto);
         }
 
-        public CartAggregate GetCart(int id)
+        public CartAggregate GetCart(Guid cartKey)
         {
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
-            CartDto cart = GetFromCollection(id, cartCollection);
+            CartDto cart = GetFromCollection(cartKey, cartCollection);
             return _mapper.Map<CartAggregate>(cart);
         }
 
-
-
         public void RemoveCart(CartAggregate cart)
         {
-            var cartDto = _mapper.Map<CartDto>(cart);
+            RemoveCart(cart.CartKey);
+        }
+
+        public void RemoveCart(Guid cartKey)
+        {
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
-            cartCollection.Delete(cartDto.Id);
+            cartCollection.DeleteMany(x => x.CartKey == cartKey);
         }
 
         public void UpdateCart(CartAggregate cart)
@@ -61,10 +64,10 @@ namespace CartingService.DataLayer.Repositories
             cartCollection.Update(cartDto);
         }
 
-        private static CartDto GetFromCollection(int id, ILiteCollection<CartDto> cartCollection)
+        private static CartDto GetFromCollection(Guid cartKey, ILiteCollection<CartDto> cartCollection)
         {
             return cartCollection.Query()
-                            .Where(cart => cart.Id == id)
+                            .Where(cart => cart.CartKey == cartKey)
                             .SingleOrDefault();
         }
     }
