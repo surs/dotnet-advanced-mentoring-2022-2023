@@ -14,6 +14,11 @@ namespace CartingService.BusinessLayer.Services
         }
         public void AddItemToCart(Guid cartKey, Item item, int quantity)
         {
+            if (quantity <= 0)
+            {
+                throw new CartException("Cannot add less than 1 item to cart");
+            }
+
             FluentValidation.Results.ValidationResult validationResult = Item.Validator.Validate(item);
             if (!validationResult.IsValid)
             {
@@ -54,7 +59,7 @@ namespace CartingService.BusinessLayer.Services
             }
 
             RemoveItem(item, quantity, cart);
-        }       
+        }
 
         public void RemoveItemFromCart(Guid cartKey, int itemId, int quantity)
         {
