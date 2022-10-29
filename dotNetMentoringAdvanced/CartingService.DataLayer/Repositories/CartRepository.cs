@@ -61,6 +61,8 @@ namespace CartingService.DataLayer.Repositories
             var cartDto = _mapper.Map<CartDto>(cart);
             using var db = new LiteDatabase(_connectionString);
             var cartCollection = db.GetCollection<CartDto>("carts");
+            var cartInDb = GetFromCollection(cart.CartKey, cartCollection);
+            cartDto.Id = cartInDb.Id;
             cartCollection.Update(cartDto);
         }
 

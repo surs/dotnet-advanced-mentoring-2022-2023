@@ -14,6 +14,11 @@ namespace CartingService.API.Controllers.V1
             _cartingService = cartingService;
         }
 
+        /// <summary>
+        /// Retireve cart (its key) and its items.
+        /// </summary>
+        /// <param name="cartKey">Cart's key (GUID)</param>
+        /// <returns>Cart with its items.</returns>
         [HttpGet]
         public IActionResult GetCart(Guid cartKey)
         {
@@ -25,6 +30,11 @@ namespace CartingService.API.Controllers.V1
             return Ok(result);
         }
 
+        /// <summary>
+        /// Adds item to the cart
+        /// </summary>
+        /// <param name="cartKey">Cart's key (GUID)</param>
+        /// <param name="item">Item and quantity to be added to the cart</param>
         [HttpPost]
         public IActionResult AddItem(Guid cartKey, [FromBody] CartItem item)
         {
@@ -33,7 +43,18 @@ namespace CartingService.API.Controllers.V1
             return Ok();
         }
 
+        /// <summary>
+        /// Removes one item from cart.
+        /// </summary>
+        /// <param name="cartKey">Cart's key (GUID)</param>
+        /// <param name="itemId">Item's id</param>
+        /// <remarks>
+        /// When last item is removed, so is the cart.
+        /// </remarks>
         [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult RemoveItem(Guid cartKey, int itemId)
         {
             try
