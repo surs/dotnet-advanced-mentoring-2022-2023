@@ -8,8 +8,8 @@ namespace CatalogService.BusinessLayer
     {
         public static IServiceCollection RegisterBusinessLayer(this IServiceCollection services)
         {
-            services.AddTransient<ICategoryService, CategoryService>();
-            services.AddTransient<IItemService, ItemService>();
+            services.AddSingleton<ICategoryService, CategoryService>();
+            services.AddSingleton<IItemService, ItemService>();
 
             return services;
         }

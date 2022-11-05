@@ -10,9 +10,9 @@ namespace CatalogService.DataLayer
     {
         public static IServiceCollection RegisterDataLayer(this IServiceCollection services)
         {
-            services.AddDbContext<ICatalogContext, CatalogContext>();
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
-            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddDbContext<ICatalogContext, CatalogContext>(ServiceLifetime.Singleton);
+            services.AddSingleton<ICategoryRepository, CategoryRepository>();
+            services.AddSingleton<IItemRepository, ItemRepository>();
             services.AddSingleton<IMapper>(_ => EntitiesMapping.ConfigureAndCreateMapper());
             return services;
         }
