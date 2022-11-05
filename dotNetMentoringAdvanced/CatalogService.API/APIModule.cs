@@ -1,5 +1,6 @@
 ﻿using CatalogService.BusinessLayer;
 using CatalogService.DataLayer;
+using CatalogService.Exchange;
 
 namespace CatalogService.API
 {
@@ -9,7 +10,8 @@ namespace CatalogService.API
         {
             services
                 .RegisterBusinessLayer()
-                .RegisterDataLayer();
+                .RegisterDataLayer()
+                .RegisterExchange();
 
             return services;
         }

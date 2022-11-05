@@ -14,10 +14,10 @@ namespace CatalogService.DataLayer.Repositories
         private readonly ICatalogContext _context;
         private readonly IMapper _mapper;
 
-        public ItemRepository(ICatalogContext context, IMapper mapper)
+        public ItemRepository(ICatalogContext context)
         {
             _context = context;
-            _mapper = mapper;
+            _mapper = EntitiesMapping.ConfigureAndCreateMapper();
         }
 
         public Business.Item AddItem(Business.Item item)
@@ -30,7 +30,7 @@ namespace CatalogService.DataLayer.Repositories
             }
 
             itemDto.Category = category;
-            var newItem = _context.Items.Add(itemDto); 
+            var newItem = _context.Items.Add(itemDto);
             _context.SaveChanges();
             return _mapper.Map<Business.Item>(newItem.Entity);
         }
@@ -61,9 +61,19 @@ namespace CatalogService.DataLayer.Repositories
 
         public bool UpdateItem(Item item)
         {
-            var entity = _context.Items.Update(_mapper.Map<Data.Item>(item));
+            var entity = _context.Items.SingleOrDefault(i => i.Id == item.Id);
+            if(entity == null)
+            {
+                return false;
+            }
+
+            entity.Name = item.Name;
+            entity.Description = item.Description;
+            entity.CategoryId = item.Category.Id;
+            entity.Price = item.Price;
+            entity.Amount = item.Amount;
             _context.SaveChanges();
-            return entity != null;
+            return true;
         }
     }
 }

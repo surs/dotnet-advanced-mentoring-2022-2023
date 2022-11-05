@@ -13,7 +13,6 @@ namespace CatalogService.DataLayer
             services.AddDbContext<ICatalogContext, CatalogContext>(ServiceLifetime.Singleton);
             services.AddSingleton<ICategoryRepository, CategoryRepository>();
             services.AddSingleton<IItemRepository, ItemRepository>();
-            services.AddSingleton<IMapper>(_ => EntitiesMapping.ConfigureAndCreateMapper());
             return services;
         }
     }

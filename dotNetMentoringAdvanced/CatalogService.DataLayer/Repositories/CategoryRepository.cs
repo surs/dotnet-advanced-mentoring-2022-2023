@@ -12,10 +12,10 @@ namespace CatalogService.DataLayer.Repositories
         private readonly ICatalogContext _context;
         private readonly IMapper _mapper;
 
-        public CategoryRepository(ICatalogContext context, IMapper mapper)
+        public CategoryRepository(ICatalogContext context)
         {
             _context = context;
-            _mapper = mapper;
+            _mapper = EntitiesMapping.ConfigureAndCreateMapper();
         }
 
         public Business.Category AddCategory(Business.Category category)
@@ -23,7 +23,7 @@ namespace CatalogService.DataLayer.Repositories
             var categoryDto =  _mapper.Map<Data.Category>(category);
             var newCategory = _context.Categories.Add(categoryDto);
             _context.SaveChanges();
-            return _mapper.Map<Business.Category>(newCategory.Entity);            
+            return _mapper.Map<Business.Category>(newCategory.Entity);
         }
 
         public bool DeleteCategory(int id)
@@ -62,6 +62,6 @@ namespace CatalogService.DataLayer.Repositories
             return entity != null;
         }
 
-        
+
     }
 }

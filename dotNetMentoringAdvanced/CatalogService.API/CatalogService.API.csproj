@@ -17,10 +17,17 @@
   <ItemGroup>
     <ProjectReference Include="..\CatalogService.BusinessLayer\CatalogService.BusinessLayer.csproj" />
     <ProjectReference Include="..\CatalogService.DataLayer\CatalogService.DataLayer.csproj" />
+    <ProjectReference Include="..\CatalogService.Exchange\CatalogService.Exchange.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Endpoints\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

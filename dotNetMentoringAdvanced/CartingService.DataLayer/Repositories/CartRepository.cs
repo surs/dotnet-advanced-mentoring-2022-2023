@@ -13,10 +13,10 @@ namespace CartingService.DataLayer.Repositories
         private readonly string _connectionString;
         private readonly IMapper _mapper;
 
-        public CartRepository(IConfiguration config, IMapper mapper)
+        public CartRepository(IConfiguration config)
         {
             _connectionString = config.GetConnectionString("cartingDb");
-            _mapper = mapper;
+            _mapper = EntitiesMapping.ConfigureAndCreateMapper();
         }
 
         public CartAggregate CreateCart(Guid cartKey)

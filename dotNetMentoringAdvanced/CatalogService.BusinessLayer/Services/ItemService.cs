@@ -1,4 +1,5 @@
 ﻿using CatalogService.BusinessLayer.Entities;
+using CatalogService.BusinessLayer.EventArgs;
 using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 
@@ -7,6 +8,8 @@ namespace CatalogService.BusinessLayer.Services
     internal sealed class ItemService : IItemService
     {
         private readonly IItemRepository _itemRepository;
+
+        public event EventHandler<ItemChangedEventArgs> OnItemChanged;
 
         public ItemService(IItemRepository itemRepository)
         {
@@ -57,8 +60,9 @@ namespace CatalogService.BusinessLayer.Services
 
         public void UpdateItem(int id, string name, string? description, Uri? image, Category category, decimal price, int amount)
         {
-            var Item = new Item(id, name, description, image, category, price, amount);
-            _itemRepository.UpdateItem(Item);
+            var item = new Item(id, name, description, image, category, price, amount);
+            _itemRepository.UpdateItem(item);
+            OnItemChanged?.Invoke(this, new ItemChangedEventArgs { ChangedItem = item });
         }
 
     }

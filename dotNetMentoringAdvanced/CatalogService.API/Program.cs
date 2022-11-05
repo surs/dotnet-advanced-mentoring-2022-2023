@@ -2,6 +2,7 @@ using CatalogService.API;
 using CatalogService.BusinessLayer.Entities;
 using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
+using CatalogService.Exchange.Interfaces;
 
 var getSingleResource = new Func<int, string, string>((id, singleItemPath) => singleItemPath.Replace("{id}", id.ToString()));
 
@@ -15,6 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.RegisterDependencies();
 
 var app = builder.Build();
+
+var messagingService = app.Services.GetService<IItemMessagingService>();
+messagingService.Start();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -94,7 +98,7 @@ app.MapPost(items, (Item item, IItemService itemService) =>
 {
     try
     {
-        var result = itemService.AddItem(item.Name, item.Description, 
+        var result = itemService.AddItem(item.Name, item.Description,
             item.Image, item.Category, item.Price, item.Amount);
         var path = getSingleResource(result.Id, singleItem);
         return Results.Created(path, result);
@@ -141,8 +145,3 @@ app.MapDelete(singleItem, (int id, IItemService itemService) =>
 });
 
 app.Run();
-
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
