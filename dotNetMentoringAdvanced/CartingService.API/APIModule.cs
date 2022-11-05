@@ -1,5 +1,6 @@
 ﻿using CartingService.BusinessLayer;
 using CartingService.DataLayer;
+using CartingService.Listener;
 using V1 = CartingService.API.Controllers.V1;
 using V2 = CartingService.API.Controllers.V2;
 
@@ -12,7 +13,9 @@ namespace CartingService.API
             services
                 .RegisterBusinessLayer()
                 .RegisterDataLayer()
-                .RegisterApiLayer();
+                .RegisterApiLayer()
+                .RegisterListener();
+
 
             return services;
         }

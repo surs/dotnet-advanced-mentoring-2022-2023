@@ -5,6 +5,7 @@ using CartingService.DataLayer.Dtos;
 using LiteDB;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Linq;
 
 namespace CartingService.DataLayer.Repositories
 {
@@ -71,6 +72,27 @@ namespace CartingService.DataLayer.Repositories
             return cartCollection.Query()
                             .Where(cart => cart.CartKey == cartKey)
                             .SingleOrDefault();
+        }
+
+        public void UpdateBasketsItems(int itemId, string name, string description, string imageUrl, decimal price)
+        {
+            using var db = new LiteDatabase(_connectionString);
+            var cartCollection = db.GetCollection<CartDto>("carts");
+            var cartsToUpdate = cartCollection.Query().Where(c => c.CartItems.Select(i => i.Item.Id).Any(id => id == itemId)).ToList();
+            foreach (var cart in cartsToUpdate)
+            {
+                foreach(var item in cart.CartItems)
+                {
+                    if(item.Item.Id == itemId)
+                    {
+                        item.Item.Name = name;
+                        item.Item.Price = price;
+                        item.Item.Image.Url = imageUrl;
+                    }
+                }
+            }
+
+            cartCollection.Update(cartsToUpdate);
         }
     }
 }

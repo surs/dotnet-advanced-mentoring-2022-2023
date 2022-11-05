@@ -78,6 +78,11 @@ namespace CartingService.BusinessLayer.Services
             RemoveItem(item.Item, quantity, cart);
         }
 
+        public void UpdateItemsInBaskets(int itemId, string name, string? description, string? imageUrl, decimal price)
+        {
+            _repository.UpdateBasketsItems(itemId, name, description, imageUrl, price);
+        }
+
         private void RemoveItem(Item item, int quantity, CartAggregate cart)
         {
             cart.RemoveItem(item, quantity);

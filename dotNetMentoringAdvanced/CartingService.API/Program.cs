@@ -1,4 +1,5 @@
 using CartingService.API;
+using CartingService.Listener;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +13,14 @@ builder.Services.AddSwaggerGen(o =>
 {
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     o.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-    
+
 });
 builder.Services.RegisterDependencies();
 
 var app = builder.Build();
+
+var listener = app.Services.GetService<IItemChangedListener>();
+listener.Start();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

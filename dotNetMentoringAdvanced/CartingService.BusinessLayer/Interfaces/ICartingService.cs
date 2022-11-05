@@ -9,5 +9,6 @@ namespace CartingService.BusinessLayer.Interfaces
         void AddItemToCart(Guid cartKey, Item item, int quantity);
         void RemoveItemFromCart(Guid cartKey, Item item, int quantity);
         void RemoveItemFromCart(Guid cartKey, int itemId, int quantity);
+        void UpdateItemsInBaskets(int id, string name, string? description, string? imageUrl, decimal price);
     }
 }

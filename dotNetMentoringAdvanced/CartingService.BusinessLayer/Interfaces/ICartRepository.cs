@@ -9,5 +9,6 @@ namespace CartingService.BusinessLayer.Interfaces
         CartAggregate CreateCart(Guid cartKey);
         void RemoveCart(CartAggregate cart);
         void RemoveCart(Guid cartKey);
+        void UpdateBasketsItems(int itemId, string name, string? description, string? imageUrl, decimal price);
     }
 }
