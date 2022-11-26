@@ -3,6 +3,7 @@ using CatalogService.BusinessLayer.Entities;
 using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 using CatalogService.Exchange.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 var getSingleResource = new Func<int, string, string>((id, singleItemPath) => singleItemPath.Replace("{id}", id.ToString()));
 
@@ -14,6 +15,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.RegisterDependencies();
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = "https://localhost:5001";
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            ValidateAudience = false
+        };
+    });
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -28,6 +40,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 
 const string categories = "/categories";
 const string singleCategory = categories + "/{id}";
@@ -40,7 +54,7 @@ app.MapGet(categories, (ICategoryService categoryService) =>
     return Results.Ok(result);
 });
 
-app.MapPost(categories, (Category category, ICategoryService categoryService) =>
+app.MapPost(categories, [Authorize] (Category category, ICategoryService categoryService) =>
 {
     try
     {
@@ -54,7 +68,7 @@ app.MapPost(categories, (Category category, ICategoryService categoryService) =>
     }
 });
 
-app.MapPut(singleCategory, (int id, Category category, ICategoryService categoryService) =>
+app.MapPut(singleCategory, [Authorize] (int id, Category category, ICategoryService categoryService) =>
 {
     try
     {
@@ -71,7 +85,7 @@ app.MapPut(singleCategory, (int id, Category category, ICategoryService category
     }
 });
 
-app.MapDelete(singleCategory, (int id, ICategoryService categoryService) =>
+app.MapDelete(singleCategory, [Authorize] (int id, ICategoryService categoryService) =>
 {
     try
     {
@@ -94,7 +108,7 @@ app.MapGet(items, (IItemService itemService) =>
     return Results.Ok(result);
 });
 
-app.MapPost(items, (Item item, IItemService itemService) =>
+app.MapPost(items, [Authorize] (Item item, IItemService itemService) =>
 {
     try
     {
@@ -109,7 +123,7 @@ app.MapPost(items, (Item item, IItemService itemService) =>
     }
 });
 
-app.MapPut(singleItem, (int id, Item item, IItemService itemService) =>
+app.MapPut(singleItem, [Authorize] (int id, Item item, IItemService itemService) =>
 {
     try
     {
@@ -127,7 +141,7 @@ app.MapPut(singleItem, (int id, Item item, IItemService itemService) =>
     }
 });
 
-app.MapDelete(singleItem, (int id, IItemService itemService) =>
+app.MapDelete(singleItem, [Authorize] (int id, IItemService itemService) =>
 {
     try
     {
