@@ -4,6 +4,7 @@ using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 using CatalogService.Exchange.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
 
 var getSingleResource = new Func<int, string, string>((id, singleItemPath) => singleItemPath.Replace("{id}", id.ToString()));
 
@@ -20,7 +21,7 @@ builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
         options.Authority = "https://localhost:5001";
-        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateAudience = false
         };
@@ -54,7 +55,7 @@ app.MapGet(categories, (ICategoryService categoryService) =>
     return Results.Ok(result);
 });
 
-app.MapPost(categories, [Authorize] (Category category, ICategoryService categoryService) =>
+app.MapPost(categories, [Authorize(Roles = Roles.Manager)] (Category category, ICategoryService categoryService) =>
 {
     try
     {
@@ -68,7 +69,7 @@ app.MapPost(categories, [Authorize] (Category category, ICategoryService categor
     }
 });
 
-app.MapPut(singleCategory, [Authorize] (int id, Category category, ICategoryService categoryService) =>
+app.MapPut(singleCategory, [Authorize(Roles = Roles.Manager)] (int id, Category category, ICategoryService categoryService) =>
 {
     try
     {
@@ -85,7 +86,7 @@ app.MapPut(singleCategory, [Authorize] (int id, Category category, ICategoryServ
     }
 });
 
-app.MapDelete(singleCategory, [Authorize] (int id, ICategoryService categoryService) =>
+app.MapDelete(singleCategory, [Authorize(Roles = Roles.Manager)] (int id, ICategoryService categoryService) =>
 {
     try
     {
@@ -108,7 +109,7 @@ app.MapGet(items, (IItemService itemService) =>
     return Results.Ok(result);
 });
 
-app.MapPost(items, [Authorize] (Item item, IItemService itemService) =>
+app.MapPost(items, [Authorize(Roles = Roles.Manager)] (Item item, IItemService itemService) =>
 {
     try
     {
@@ -123,7 +124,7 @@ app.MapPost(items, [Authorize] (Item item, IItemService itemService) =>
     }
 });
 
-app.MapPut(singleItem, [Authorize] (int id, Item item, IItemService itemService) =>
+app.MapPut(singleItem, [Authorize(Roles = Roles.Manager)] (int id, Item item, IItemService itemService) =>
 {
     try
     {
@@ -141,7 +142,7 @@ app.MapPut(singleItem, [Authorize] (int id, Item item, IItemService itemService)
     }
 });
 
-app.MapDelete(singleItem, [Authorize] (int id, IItemService itemService) =>
+app.MapDelete(singleItem, [Authorize(Roles = Roles.Manager)] (int id, IItemService itemService) =>
 {
     try
     {
