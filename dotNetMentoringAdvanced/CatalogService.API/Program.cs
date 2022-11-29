@@ -153,6 +153,23 @@ app.MapPost(items, [Authorize(Roles = Roles.Manager)] (Item item, IItemService i
     }
 });
 
+app.MapGet(singleItem, (int id, IItemService itemService) =>
+{
+    try
+    {
+        var item = itemService.GetItem(id);
+        return Results.Ok(item);
+    }
+    catch (CatalogException)
+    {
+        return Results.NotFound();
+    }
+    catch (Exception e)
+    {
+        return Results.BadRequest(e);
+    }
+});
+
 app.MapPut(singleItem, [Authorize(Roles = Roles.Manager)] (int id, Item item, IItemService itemService) =>
 {
     try
