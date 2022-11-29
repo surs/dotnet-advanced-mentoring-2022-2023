@@ -127,6 +127,17 @@ app.MapGet(items, (IItemService itemService) =>
     return Results.Ok(result);
 });
 
+app.MapGet(singleItem + "/properties", (int id) =>
+{
+    var result = new Dictionary<string, string>
+    {
+        { "Color", "Red" },
+        { "Size", "L" }
+    };
+
+    return Results.Ok(result);
+});
+
 app.MapPost(items, [Authorize(Roles = Roles.Manager)] (Item item, IItemService itemService) =>
 {
     try
