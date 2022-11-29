@@ -1,5 +1,98 @@
 {
-  "Routes": [],
+  "Routes": [
+    //catalog categories endpoints
+    {
+      "DownstreamPathTemplate": "/categories",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/categories",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "SwaggerKey": "categories"
+    },
+    {
+      "DownstreamPathTemplate": "/categories/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/categories/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ],
+      "SwaggerKey": "category"
+    },
+    //catalog items endpoints
+    {
+      "DownstreamPathTemplate": "/items",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/items",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "SwaggerKey": "items"
+    },
+    {
+      "DownstreamPathTemplate": "/items/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/items/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ],
+      "SwaggerKey": "itemChange"
+    },
+    {
+      "DownstreamPathTemplate": "/items/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/items/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Item",
+      "SwaggerKey": "item"
+    },
+    {
+      "DownstreamPathTemplate": "/items/{id}/properties",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/items/{id}/properties",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Properties",
+      "SwaggerKey": "properties"
+    }
+  ],
+  //Item and Properties basic aggregate
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "Item",
+        "Properties"
+      ],
+      "UpstreamPathTemplate": "/items/{id}/details" // argument must be in the same position as in downstream
+    }
+  ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:7170/"
   }
