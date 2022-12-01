@@ -1,4 +1,5 @@
 using Microsoft.IdentityModel.Tokens;
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -18,7 +19,11 @@ builder.Services.AddAuthentication()
         };
     });
 
-builder.Services.AddOcelot();
+builder.Services.AddOcelot()
+    .AddCacheManager(x =>
+    {
+        x.WithDictionaryHandle();
+    });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -12,7 +12,10 @@
       ],
       "UpstreamPathTemplate": "/catalog/categories",
       "UpstreamHttpMethod": [ "Get" ],
-      "SwaggerKey": "categories"
+      "SwaggerKey": "categories",
+      "FileCacheOptions": {
+        "TtlSeconds": 60
+      }
     },
     {
       "DownstreamPathTemplate": "/categories",
@@ -60,7 +63,10 @@
       ],
       "UpstreamPathTemplate": "/catalog/items",
       "UpstreamHttpMethod": [ "Get" ],
-      "SwaggerKey": "items"
+      "SwaggerKey": "items",
+      "FileCacheOptions": {
+        "TtlSeconds": 60
+      }
     },
     {
       "DownstreamPathTemplate": "/items",
