@@ -11,8 +11,25 @@
         }
       ],
       "UpstreamPathTemplate": "/catalog/categories",
-      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UpstreamHttpMethod": [ "Get" ],
       "SwaggerKey": "categories"
+    },
+    {
+      "DownstreamPathTemplate": "/categories",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/categories",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "categories",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityServer",
+        "AllowedScopes": [ "catalog" ]
+      }
     },
     {
       "DownstreamPathTemplate": "/categories/{id}",
@@ -25,7 +42,11 @@
       ],
       "UpstreamPathTemplate": "/catalog/categories/{id}",
       "UpstreamHttpMethod": [ "Put", "Delete" ],
-      "SwaggerKey": "category"
+      "SwaggerKey": "category",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityServer",
+        "AllowedScopes": [ "catalog" ]
+      }
     },
     //catalog items endpoints
     {
@@ -38,8 +59,25 @@
         }
       ],
       "UpstreamPathTemplate": "/catalog/items",
-      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UpstreamHttpMethod": [ "Get" ],
       "SwaggerKey": "items"
+    },
+    {
+      "DownstreamPathTemplate": "/items",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/items",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "items",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityServer",
+        "AllowedScopes": [ "catalog" ]
+      }
     },
     {
       "DownstreamPathTemplate": "/items/{id}",
@@ -52,7 +90,11 @@
       ],
       "UpstreamPathTemplate": "/catalog/items/{id}",
       "UpstreamHttpMethod": [ "Put", "Delete" ],
-      "SwaggerKey": "itemChange"
+      "SwaggerKey": "itemChange",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "IdentityServer",
+        "AllowedScopes": [ "catalog" ]
+      }
     },
     {
       "DownstreamPathTemplate": "/items/{id}",
@@ -81,7 +123,7 @@
       "UpstreamHttpMethod": [ "Get" ],
       "Key": "Properties",
       "SwaggerKey": "properties"
-    }
+    },
 
     //carting endpoints
     {
@@ -95,7 +137,6 @@
       ],
       "UpstreamPathTemplate": "/cart",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete" ],
-      "Key": "Properties",
       "SwaggerKey": "properties"
     }
   ],
