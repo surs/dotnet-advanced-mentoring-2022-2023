@@ -12,7 +12,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/categories",
       "UpstreamHttpMethod": [ "Get" ],
-      "SwaggerKey": "categories",
+      "SwaggerKey": "catalog",
       "FileCacheOptions": {
         "TtlSeconds": 60
       }
@@ -28,7 +28,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/categories",
       "UpstreamHttpMethod": [ "Post" ],
-      "SwaggerKey": "categories",
+      "SwaggerKey": "catalog",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "IdentityServer",
         "AllowedScopes": [ "catalog" ]
@@ -45,7 +45,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/categories/{id}",
       "UpstreamHttpMethod": [ "Put", "Delete" ],
-      "SwaggerKey": "category",
+      "SwaggerKey": "catalog",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "IdentityServer",
         "AllowedScopes": [ "catalog" ]
@@ -63,7 +63,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/items",
       "UpstreamHttpMethod": [ "Get" ],
-      "SwaggerKey": "items",
+      "SwaggerKey": "catalog",
       "FileCacheOptions": {
         "TtlSeconds": 60
       }
@@ -79,7 +79,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/items",
       "UpstreamHttpMethod": [ "Post" ],
-      "SwaggerKey": "items",
+      "SwaggerKey": "catalog",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "IdentityServer",
         "AllowedScopes": [ "catalog" ]
@@ -96,7 +96,7 @@
       ],
       "UpstreamPathTemplate": "/catalog/items/{id}",
       "UpstreamHttpMethod": [ "Put", "Delete" ],
-      "SwaggerKey": "itemChange",
+      "SwaggerKey": "catalog",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "IdentityServer",
         "AllowedScopes": [ "catalog" ]
@@ -114,7 +114,7 @@
       "UpstreamPathTemplate": "/catalog/items/{id}",
       "UpstreamHttpMethod": [ "Get" ],
       "Key": "Item",
-      "SwaggerKey": "item"
+      "SwaggerKey": "catalog"
     },
     {
       "DownstreamPathTemplate": "/items/{id}/properties",
@@ -128,7 +128,7 @@
       "UpstreamPathTemplate": "/catalog/items/{id}/properties",
       "UpstreamHttpMethod": [ "Get" ],
       "Key": "Properties",
-      "SwaggerKey": "properties"
+      "SwaggerKey": "catalog"
     },
 
     //carting endpoints
@@ -143,7 +143,7 @@
       ],
       "UpstreamPathTemplate": "/cart",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete" ],
-      "SwaggerKey": "properties"
+      "SwaggerKey": "carting"
     }
   ],
   //Item and Properties basic aggregate
@@ -154,6 +154,28 @@
         "Properties"
       ],
       "UpstreamPathTemplate": "/items/{id}/details" // argument must be in the same position as in downstream
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "catalog",
+      "Config": [
+        {
+          "Name": "Catalog API",
+          "Version": "v1",
+          "Url": "https://localhost:7227/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "carting",
+      "Config": [
+        {
+          "Name": "Carting API",
+          "Version": "v1",
+          "Url": "https://localhost:7108/swagger/v1/swagger.json"
+        }
+      ]
     }
   ],
   "GlobalConfiguration": {

@@ -9,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory());
 builder.Configuration.AddJsonFile("ocelot.json");
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerForOcelot(builder.Configuration, options =>
+{
+    options.GenerateDocsForAggregates = true;
+});
 builder.Services.AddAuthentication()
     .AddJwtBearer("IdentityServer", options =>
     {
@@ -27,7 +33,10 @@ builder.Services.AddOcelot()
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
+app.UseSwaggerForOcelotUI(options =>
+    {
+        options.PathToSwaggerGenerator = "/swagger/docs";
+    });
 app.UseHttpsRedirection();
 app.UseOcelot().Wait();
 
