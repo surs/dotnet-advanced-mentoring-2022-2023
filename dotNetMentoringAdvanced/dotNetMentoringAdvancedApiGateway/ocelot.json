@@ -82,6 +82,22 @@
       "Key": "Properties",
       "SwaggerKey": "properties"
     }
+
+    //carting endpoints
+    {
+      "DownstreamPathTemplate": "/v1/cart",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7227
+        }
+      ],
+      "UpstreamPathTemplate": "/cart",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ],
+      "Key": "Properties",
+      "SwaggerKey": "properties"
+    }
   ],
   //Item and Properties basic aggregate
   "Aggregates": [
