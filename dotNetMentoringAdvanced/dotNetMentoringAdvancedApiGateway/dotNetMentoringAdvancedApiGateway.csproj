@@ -1,12 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationInsightsResourceId>/subscriptions/d476937b-6597-4445-8aee-9bf57ff6cf6b/resourceGroups/dotNetAdvanced/providers/microsoft.insights/components/dotNetAdvancedInsights</ApplicationInsightsResourceId>
+    <UserSecretsId>2bb54274-0f45-4c99-ad66-97a8ce510fe2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
     <PackageReference Include="MMLib.SwaggerForOcelot" Version="6.0.0" />
     <PackageReference Include="Ocelot" Version="18.0.0" />

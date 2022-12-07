@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen(o =>
 
 });
 builder.Services.RegisterDependencies();
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
 
 var app = builder.Build();
 
