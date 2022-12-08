@@ -12,7 +12,7 @@ namespace CatalogService.BusinessLayer.Interfaces
         Item AddItem(string name, string? description, Uri? image,
             Category category, decimal price, int amount);
         void UpdateItem(int id, string name, string? description, Uri? image,
-            Category category, decimal price, int amount);
+            Category category, decimal price, int amount, string? correlation = null);
         void DeleteItem(int id);
     }
 }

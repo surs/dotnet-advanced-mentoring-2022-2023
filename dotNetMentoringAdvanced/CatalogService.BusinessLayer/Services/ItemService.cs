@@ -58,11 +58,11 @@ namespace CatalogService.BusinessLayer.Services
             return Item;
         }
 
-        public void UpdateItem(int id, string name, string? description, Uri? image, Category category, decimal price, int amount)
+        public void UpdateItem(int id, string name, string? description, Uri? image, Category category, decimal price, int amount, string? correlation = null)
         {
             var item = new Item(id, name, description, image, category, price, amount);
             _itemRepository.UpdateItem(item);
-            OnItemChanged?.Invoke(this, new ItemChangedEventArgs { ChangedItem = item });
+            OnItemChanged?.Invoke(this, new ItemChangedEventArgs { ChangedItem = item, Correlation = correlation });
         }
 
     }

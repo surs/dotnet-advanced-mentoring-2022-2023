@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System.Text;
 using RabbitMQ.Client;
 using CatalogService.Exchange.Interfaces;
+using Microsoft.ApplicationInsights;
 
 namespace CatalogService.Exchange
 {
@@ -14,12 +15,14 @@ namespace CatalogService.Exchange
     {
         private readonly IItemService _itemService;
         private readonly IMessagingConfiguration _messagingConfiguration;
+        private readonly TelemetryClient? _telemetry;
         private readonly IMapper _mapper;
 
-        public ItemMessagingService(IItemService itemService, IMessagingConfiguration messagingConfiguration)
+        public ItemMessagingService(IItemService itemService, IMessagingConfiguration messagingConfiguration, TelemetryClient? telemetry)
         {
             _itemService = itemService;
             _messagingConfiguration = messagingConfiguration;
+            _telemetry = telemetry;
             _mapper = EntitiesMapping.ConfigureAndCreateMapper();
         }
 
@@ -37,16 +40,34 @@ namespace CatalogService.Exchange
         {
             using var connection = _messagingConfiguration.ConnectionFactory.CreateConnection();
             using var channel = connection.CreateModel();
-            var message = GetMessage(eventArgs.ChangedItem);
-            channel.BasicPublish(_messagingConfiguration.Exchange,
-                string.Empty,
-                null,
-                message);
+            var message = GetMessage(eventArgs);
+            TrackEvent(eventArgs);
+            channel.BasicPublish(exchange: _messagingConfiguration.Exchange,
+                routingKey: string.Empty,
+                basicProperties: null,
+                body: message);
         }
 
-        private byte[] GetMessage(Item item)
+        private IDictionary<string, string> GetEventProperties(ItemChangedEventArgs eventArgs) =>
+            new Dictionary<string, string>
+            {
+                ["sender"] = this.ToString() ?? string.Empty,
+                ["correlation"] = eventArgs.Correlation ?? string.Empty,
+                ["payload"] = JsonConvert.SerializeObject(eventArgs.ChangedItem)
+            };
+
+        private void TrackEvent(ItemChangedEventArgs eventArgs)
         {
-            var dto = _mapper.Map<ItemDto>(item);
+            if (_telemetry != null)
+            {
+                _telemetry.TrackEvent("itemChangedSent", properties: GetEventProperties(eventArgs));
+            }
+        }
+
+        private byte[] GetMessage(ItemChangedEventArgs data)
+        {
+            var dto = _mapper.Map<ItemDto>(data.ChangedItem);
+            dto.Correlation = data.Correlation;
             var serialized = JsonConvert.SerializeObject(dto);
             return Encoding.UTF8.GetBytes(serialized);
         }

@@ -17,7 +17,8 @@ namespace CatalogService.Exchange
                     .ConvertUsing(u => u != null ? u.AbsolutePath : null);
 
                 cfg.CreateMap<Business.Item, Data.ItemDto>()
-                    .ForMember(i => i.CategoryId, o => o.MapFrom(s => s.Category.Id));
+                    .ForMember(i => i.CategoryId, o => o.MapFrom(s => s.Category.Id))
+                    .ForMember(i => i.Correlation, o => o.Ignore());
             });
             return config.CreateMapper();
         }

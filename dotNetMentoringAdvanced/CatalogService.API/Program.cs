@@ -4,8 +4,10 @@ using CatalogService.BusinessLayer.Exceptions;
 using CatalogService.BusinessLayer.Interfaces;
 using CatalogService.Exchange.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
 var getSingleResource = new Func<int, string, string>((id, singleItemPath) => singleItemPath.Replace("{id}", id.ToString()));
 
@@ -171,12 +173,19 @@ app.MapGet(singleItem, (int id, IItemService itemService) =>
     }
 });
 
-app.MapPut(singleItem, [Authorize(Roles = Roles.Manager)] (int id, Item item, IItemService itemService) =>
+//app.MapPut(singleItem, [Authorize(Roles = Roles.Manager)] (int id, Item item, [FromHeader(Name = "Correlation-Context")] string correlation, IItemService itemService) =>
+app.MapPut(singleItem, ([FromRoute] int id, [FromBody] Item item, HttpRequest request, IItemService itemService) =>
 {
     try
     {
+        //var id = int.Parse(request.RouteValues["id"]?.ToString() ?? "0");
+        //using var reader = new StreamReader(request.Body);
+        //reader.BaseStream.Seek(0, SeekOrigin.Begin);
+        //var bodyText = reader.ReadToEnd();
+        //var item = JsonConvert.DeserializeObject<Item>(bodyText);
+        var haveCorrelation = request.Headers.TryGetValue("Correlation-Context", out var correlation);
         itemService.UpdateItem(id, item.Name, item.Description,
-            item.Image, item.Category, item.Price, item.Amount);
+            item.Image, item.Category, item.Price, item.Amount, haveCorrelation ? correlation : string.Empty);
         return Results.Ok();
     }
     catch (CatalogException e)
