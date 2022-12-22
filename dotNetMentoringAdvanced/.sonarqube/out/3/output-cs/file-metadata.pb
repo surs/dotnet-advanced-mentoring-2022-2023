@@ -1,0 +1,6 @@
+£
+™C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\Program.csutf-8ß
+ÓC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\obj\Debug\net6.0\dotNetMentoringAdvancedApiGateway.GlobalUsings.g.csutf-8Ú
+ÎC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8Ý
+ÑC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\obj\Debug\net6.0\dotNetMentoringAdvancedApiGateway.AssemblyInfo.csutf-8ð
+äC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\obj\Debug\net6.0\dotNetMentoringAdvancedApiGateway.MvcApplicationPartsAssemblyInfo.csutf-8
