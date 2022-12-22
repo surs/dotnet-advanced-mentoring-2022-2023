@@ -12,55 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "S3925",
-          "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 25,
-                  "endLine": 6,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 16,
-                  "endLine": 25,
-                  "endColumn": 29
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 16,
-                  "endLine": 25,
-                  "endColumn": 29
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Make this constructor 'private'.",
-              "1": "Call constructor 'base(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
           "ruleId": "S927",
           "level": "warning",
           "message": "Rename parameter 'itemId' to 'id' to match the interface declaration.",
@@ -83,22 +34,6 @@
         }
       ],
       "rules": {
-        "S3925": {
-          "id": "S3925",
-          "shortDescription": "\"ISerializable\" should be implemented correctly",
-          "fullDescription": "The ISerializable interface is the mechanism to control the type serialization process. If not implemented correctly this could result in an invalid serialization and hard to detect bugs.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3925",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S927": {
           "id": "S927",
           "shortDescription": "Parameter names should match base declaration and other partial definitions",

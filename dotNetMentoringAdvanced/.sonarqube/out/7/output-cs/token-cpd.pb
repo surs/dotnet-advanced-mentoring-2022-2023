@@ -1,4 +1,4 @@
-ƒ
+å
 —C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\CatalogContext.cs
 	namespace 	
 CatalogService
@@ -34,29 +34,27 @@
 DbSet 
 < 
 Category 
-> 
-? 
+> 
 
-Categories  *
-{+ ,
-get- 0
-;0 1
-set2 5
-;5 6
-}7 8
+Categories )
+{* +
+get, /
+;/ 0
+set1 4
+;4 5
+}6 7
 public 
 DbSet 
 < 
 Item 
-> 
-? 
-Items !
-{" #
-get$ '
-;' (
-set) ,
-;, -
-}. /
+> 
+Items  
+{! "
+get# &
+;& '
+set( +
+;+ ,
+}- .
 public 
 CatalogContext 
 ( 
@@ -660,7 +658,7 @@ CategoryId& 0
 ;**( )
 }++ 	
 },, 
-}-- õ
+}-- ×
 £C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Interfaces\ICatalogContext.cs
 	namespace 	
 CatalogService
@@ -679,25 +677,23 @@ Interfaces# -
 DbSet 
 < 
 Category 
-> 
-? 
+> 
 
-Categories  *
-{+ ,
-get- 0
-;0 1
-}2 3
+Categories )
+{* +
+get, /
+;/ 0
+}1 2
 public		 
 DbSet		 
 <		 
 Item		 
->		 
-?		 
-Items		 !
-{		" #
-get		$ '
-;		' (
-}		) *
+>		 
+Items		  
+{		! "
+get		# &
+;		& '
+}		( )
 void
 
  

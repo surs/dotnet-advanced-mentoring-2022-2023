@@ -363,7 +363,7 @@ IValidator "
 }		 
 }
 
- Å
+ ÿ
 •C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Exceptions\CartException.cs
 	namespace 	
 CartingService
@@ -475,26 +475,24 @@ Exceptions' 1
 (% &
 )& '
 { 	
-} 	
-public 
-CartException 
-( 
-SerializationInfo .
-info/ 3
-,3 4
-StreamingContext5 E
-contextF M
-)M N
-{ 	
-base 
-. 
-GetObjectData 
-( 
-info #
-,# $
-context% ,
-), -
-;- .
+} 	
+private 
+CartException 
+( 
+SerializationInfo /
+info0 4
+,4 5
+StreamingContext6 F
+contextG N
+)N O
+:P Q
+baseR V
+(V W
+infoW [
+,[ \
+context] d
+)d e
+{ 	
 } 	
 } 
 } ®

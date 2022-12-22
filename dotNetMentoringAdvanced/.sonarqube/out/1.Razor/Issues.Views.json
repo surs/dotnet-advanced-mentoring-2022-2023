@@ -45,12 +45,60 @@
           "locations": [
             {
               "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/AccessDenied.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs",
                 "region": {
                   "startLine": 28,
                   "startColumn": 67,
                   "endLine": 28,
                   "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Logout.cshtml.g.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 210,
+                  "endLine": 55,
+                  "endColumn": 212
                 }
               }
             }
@@ -93,12 +141,36 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Logout.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ScopeListItem.cshtml.g.cs",
                 "region": {
-                  "startLine": 55,
-                  "startColumn": 210,
-                  "endLine": 55,
-                  "endColumn": 212
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Device/Success.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
                 }
               }
             }
@@ -165,12 +237,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Device/Success.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 67,
-                  "endLine": 29,
-                  "endColumn": 79
+                  "startLine": 83,
+                  "startColumn": 208,
+                  "endLine": 83,
+                  "endColumn": 210
                 }
               }
             }
@@ -189,12 +261,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ScopeListItem.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 67,
-                  "endLine": 29,
-                  "endColumn": 79
+                  "startLine": 129,
+                  "startColumn": 207,
+                  "endLine": 129,
+                  "endColumn": 209
                 }
               }
             }
@@ -261,174 +333,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/AccessDenied.cshtml.g.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 67,
-                  "endLine": 29,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 67,
-                  "endLine": 29,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Redirect.cshtml.g.cs",
-                "region": {
-                  "startLine": 73,
-                  "startColumn": 212,
-                  "endLine": 73,
-                  "endColumn": 214
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
-                "region": {
-                  "startLine": 73,
-                  "startColumn": 204,
-                  "endLine": 73,
-                  "endColumn": 206
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
-                "region": {
-                  "startLine": 95,
-                  "startColumn": 207,
-                  "endLine": 95,
-                  "endColumn": 209
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
-                "region": {
-                  "startLine": 110,
-                  "startColumn": 207,
-                  "endLine": 110,
-                  "endColumn": 209
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
-                "region": {
-                  "startLine": 125,
-                  "startColumn": 207,
-                  "endLine": 125,
-                  "endColumn": 209
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Diagnostics/Index.cshtml.g.cs",
                 "region": {
                   "startLine": 29,
@@ -459,54 +363,6 @@
                   "startColumn": 210,
                   "endLine": 111,
                   "endColumn": 212
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 208,
-                  "endLine": 83,
-                  "endColumn": 210
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
-                "region": {
-                  "startLine": 129,
-                  "startColumn": 207,
-                  "endLine": 129,
-                  "endColumn": 209
                 }
               }
             }
@@ -675,6 +531,366 @@
                   "startColumn": 216,
                   "endLine": 333,
                   "endColumn": 218
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 207,
+                  "endLine": 71,
+                  "endColumn": 209
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 210,
+                  "endLine": 104,
+                  "endColumn": 212
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 216,
+                  "endLine": 127,
+                  "endColumn": 218
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 148,
+                  "startColumn": 211,
+                  "endLine": 148,
+                  "endColumn": 213
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 174,
+                  "startColumn": 216,
+                  "endLine": 174,
+                  "endColumn": 218
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 195,
+                  "startColumn": 211,
+                  "endLine": 195,
+                  "endColumn": 213
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 230,
+                  "startColumn": 211,
+                  "endLine": 230,
+                  "endColumn": 213
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 252,
+                  "startColumn": 216,
+                  "endLine": 252,
+                  "endColumn": 218
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "region": {
+                  "startLine": 332,
+                  "startColumn": 208,
+                  "endLine": 332,
+                  "endColumn": 210
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Redirect.cshtml.g.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 212,
+                  "endLine": 73,
+                  "endColumn": 214
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 204,
+                  "endLine": 73,
+                  "endColumn": 206
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 207,
+                  "endLine": 95,
+                  "endColumn": 209
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 207,
+                  "endLine": 110,
+                  "endColumn": 209
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 207,
+                  "endLine": 125,
+                  "endColumn": 209
                 }
               }
             }
@@ -1020,232 +1236,40 @@
           }
         },
         {
-          "ruleId": "CS1998",
+          "ruleId": "CS0169",
           "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "message": "The field 'Views_Shared__ValidationSummary.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationSummary.cshtml.g.cs",
                 "region": {
-                  "startLine": 71,
-                  "startColumn": 207,
-                  "endLine": 71,
-                  "endColumn": 209
+                  "startLine": 35,
+                  "startColumn": 24,
+                  "endLine": 35,
+                  "endColumn": 52
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 104,
-                  "startColumn": 210,
-                  "endLine": 104,
-                  "endColumn": 212
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 127,
-                  "startColumn": 216,
-                  "endLine": 127,
-                  "endColumn": 218
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 148,
-                  "startColumn": 211,
-                  "endLine": 148,
-                  "endColumn": 213
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 174,
-                  "startColumn": 216,
-                  "endLine": 174,
-                  "endColumn": 218
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 195,
-                  "startColumn": 211,
-                  "endLine": 195,
-                  "endColumn": 213
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 230,
-                  "startColumn": 211,
-                  "endLine": 230,
-                  "endColumn": 213
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 252,
-                  "startColumn": 216,
-                  "endLine": 252,
-                  "endColumn": 218
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS1998",
-          "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs",
-                "region": {
-                  "startLine": 332,
-                  "startColumn": 208,
-                  "endLine": 332,
-                  "endColumn": 210
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
+            "warningLevel": 3
           }
         },
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "The field 'Views_Account_Logout.__tagHelperStringValueBuffer' is never used",
+          "message": "The field 'Views_Grants_Index.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Logout.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Grants/Index.cshtml.g.cs",
                 "region": {
                   "startLine": 35,
                   "startColumn": 24,
@@ -1286,18 +1310,18 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "The field 'Views_Device_UserCodeCapture.__tagHelperStringValueBuffer' is never used",
+          "message": "The field 'Views_Shared__Nav.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Device/UserCodeCapture.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
                 "region": {
-                  "startLine": 36,
+                  "startLine": 48,
                   "startColumn": 24,
-                  "endLine": 36,
+                  "endLine": 48,
                   "endColumn": 52
                 }
               }
@@ -1334,42 +1358,18 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "The field 'Views_Home_Index.__tagHelperStringValueBuffer' is never used",
+          "message": "The field 'Views_Account_Logout.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Account/Logout.cshtml.g.cs",
                 "region": {
-                  "startLine": 45,
+                  "startLine": 35,
                   "startColumn": 24,
-                  "endLine": 45,
-                  "endColumn": 52
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS0169",
-          "level": "warning",
-          "message": "The field 'Views_Shared__Nav.__tagHelperStringValueBuffer' is never used",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Nav.cshtml.g.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 24,
-                  "endLine": 48,
+                  "endLine": 35,
                   "endColumn": 52
                 }
               }
@@ -1406,18 +1406,18 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "The field 'Views_Shared__ValidationSummary.__tagHelperStringValueBuffer' is never used",
+          "message": "The field 'Views_Device_UserCodeCapture.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationSummary.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Device/UserCodeCapture.cshtml.g.cs",
                 "region": {
-                  "startLine": 35,
+                  "startLine": 36,
                   "startColumn": 24,
-                  "endLine": 35,
+                  "endLine": 36,
                   "endColumn": 52
                 }
               }
@@ -1430,18 +1430,18 @@
         {
           "ruleId": "CS0169",
           "level": "warning",
-          "message": "The field 'Views_Grants_Index.__tagHelperStringValueBuffer' is never used",
+          "message": "The field 'Views_Home_Index.__tagHelperStringValueBuffer' is never used",
           "suppressionStates": [
             "suppressedInSource"
           ],
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Grants/Index.cshtml.g.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
                 "region": {
-                  "startLine": 35,
+                  "startLine": 45,
                   "startColumn": 24,
-                  "endLine": 35,
+                  "endLine": 45,
                   "endColumn": 52
                 }
               }
