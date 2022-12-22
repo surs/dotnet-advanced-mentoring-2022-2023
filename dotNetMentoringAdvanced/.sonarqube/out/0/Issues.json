@@ -20,10 +20,10 @@
               "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 18,
-                  "endLine": 5,
-                  "endColumn": 31
+                  "startLine": 6,
+                  "startColumn": 25,
+                  "endLine": 6,
+                  "endColumn": 38
                 }
               }
             }
@@ -33,10 +33,10 @@
               "physicalLocation": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
+                  "startLine": 25,
+                  "startColumn": 16,
+                  "endLine": 25,
+                  "endColumn": 29
                 }
               }
             },
@@ -44,10 +44,10 @@
               "physicalLocation": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 5,
-                  "startColumn": 12,
-                  "endLine": 5,
-                  "endColumn": 17
+                  "startLine": 25,
+                  "startColumn": 16,
+                  "endLine": 25,
+                  "endColumn": 29
                 }
               }
             }
@@ -55,32 +55,8 @@
           "properties": {
             "warningLevel": 1,
             "customProperties": {
-              "0": "Add 'System.SerializableAttribute' attribute on 'CartException' because it implements 'ISerializable'.",
-              "1": "Add a 'protected' constructor 'CartException(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
-          "ruleId": "S1939",
-          "level": "warning",
-          "message": "'Exception' implements 'ISerializable' so 'ISerializable' can be removed from the inheritance list.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 43,
-                  "endLine": 5,
-                  "endColumn": 58
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "redundantIndex": "1"
+              "0": "Make this constructor 'private'.",
+              "1": "Call constructor 'base(SerializationInfo, StreamingContext)'."
             }
           }
         },
@@ -107,23 +83,6 @@
         }
       ],
       "rules": {
-        "S1939": {
-          "id": "S1939",
-          "shortDescription": "Inheritance list should not be redundant",
-          "fullDescription": "An inheritance list entry is redundant if:",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1939",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S3925": {
           "id": "S3925",
           "shortDescription": "\"ISerializable\" should be implemented correctly",

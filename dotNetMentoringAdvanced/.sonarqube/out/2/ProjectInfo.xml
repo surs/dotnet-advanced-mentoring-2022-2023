@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>IdentityServer</ProjectName>
+  <ProjectName>dotNetMentoringAdvancedApiGateway</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>a3c6e62e-7d6b-42aa-b5b0-b585b29c6daa</ProjectGuid>
-  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\IdentityServer.csproj</FullPath>
+  <ProjectGuid>e293e17b-83dc-4df8-bcd5-6c6af8fc8658</ProjectGuid>
+  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\dotNetMentoringAdvancedApiGateway.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\.sonarqube\conf\2\FilesToAnalyze.txt" />
@@ -15,5 +15,5 @@
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>netcoreapp3.1</TargetFramework>
+  <TargetFramework>net6.0</TargetFramework>
 </ProjectInfo>

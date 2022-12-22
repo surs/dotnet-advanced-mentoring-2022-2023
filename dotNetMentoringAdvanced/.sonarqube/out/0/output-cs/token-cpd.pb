@@ -363,7 +363,7 @@ IValidator "
 }		 
 }
 
- â
+ 
 ¥C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Exceptions\CartException.cs
 	namespace 	
 CartingService
@@ -373,75 +373,131 @@ IValidator "
 .& '
 
 Exceptions' 1
-{ 
-public 
-
-class 
-CartException 
-:  
-	Exception! *
-,* +
-ISerializable, 9
-{ 
-internal 
-static 
-CartException %
-CartNotFound& 2
-=>3 5
-new6 9
-CartException: G
-(G H
-$strH X
-)X Y
-;Y Z
-public		 
-CartException		 
-(		 
-string		 #
-?		# $
-message		% ,
-,		, -
-	Exception		. 7
-?		7 8
-innerException		9 G
-)		G H
-:		I J
-base		K O
-(		O P
-message		P W
-,		W X
-innerException		Y g
-)		g h
-{
+{ 
+[ 
+Serializable 
+] 
+public 
+
+sealed 
+class 
+CartException %
+:& '
+	Exception( 1
+{ 
+internal 
+static 
+CartException %
+CartNotFound& 2
+=>3 5
+new6 9
+CartException: G
+(G H
+$strH X
+)X Y
+;Y Z
+public
 
- 	
-} 	
-public 
-CartException 
-( 
-string #
-?# $
-message% ,
-), -
-:. /
-base0 4
-(4 5
-message5 <
-)< =
-{ 	
-} 	
-public 
-CartException 
-( 
-) 
-:  
-base! %
-(% &
-)& '
-{ 	
-} 	
-} 
-} ¨
+ 
+CartException
+
+ 
+(
+
+ 
+string
+
+ #
+?
+
+# $
+message
+
+% ,
+,
+
+, -
+	Exception
+
+. 7
+?
+
+7 8
+innerException
+
+9 G
+)
+
+G H
+:
+
+I J
+base
+
+K O
+(
+
+O P
+message
+
+P W
+,
+
+W X
+innerException
+
+Y g
+)
+
+g h
+{ 	
+} 	
+public 
+CartException 
+( 
+string #
+?# $
+message% ,
+), -
+:. /
+base0 4
+(4 5
+message5 <
+)< =
+{ 	
+} 	
+public 
+CartException 
+( 
+) 
+:  
+base! %
+(% &
+)& '
+{ 	
+} 	
+public 
+CartException 
+( 
+SerializationInfo .
+info/ 3
+,3 4
+StreamingContext5 E
+contextF M
+)M N
+{ 	
+base 
+. 
+GetObjectData 
+( 
+info #
+,# $
+context% ,
+), -
+;- .
+} 	
+} 
+} ¨
 §C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Interfaces\ICartingService.cs
 	namespace 	
 CartingService

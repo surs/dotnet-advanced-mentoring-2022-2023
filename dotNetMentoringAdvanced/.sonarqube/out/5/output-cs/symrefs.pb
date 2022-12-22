@@ -1,108 +1,7 @@
-¢
-—C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\CatalogContext.cs
+ƒ
+”C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\Dtos\ItemDto.cs
 
- (
-
-
-  1  /
-
- )
-
-  
-- :  -
-
-  -
-F M 
-
- (ç
-˜C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\DataLayerModule.cs
-
-		 '
-
-) :2
-S [    Ã
-˜C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\EntitiesMapping.cs
-
- )
-
-		  8
- ** P
-1 4      !! 
-+ /3 7
-" #' (; <
-" #' (3 4
-@ AE F
-O PT U
-B CG H
-Q RV W
-C DH I
-R SW X
-L MQ R
-[ \` a
-  $ %
-2 37 8
-A BF G
-  $ %
-0 15 6
-""@ A""E F
-""O P""T U
-##B C##G H
-##Q R##V W
-$$I J$$N O
-$$X Y$$] ^
-%%C D%%H I
-%%R S%%W X
-&&F G&&K L
-&&U V&&Z [
-''C D''H I
-''R S''W X
-((D E((I J
-((S T((X YÖ
-£C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Interfaces\ICatalogContext.cs
-
- &
-
- )
-
-		  
-
-
-
- Ã
-ªC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Migrations\20221015203128_Initial.cs
-
-  
-
-		  "2
-		4 D  77 << 2
-     $' ,
- "  
-6 7; <
-  !% &P
-!! ## %%  &&" ''' $((! &)) !** "
-,, ".. // 
-..1 2..6 7
-11  !11% &
-
-BB  $
-BB6 FDD GG ì
-—C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Model\Category.cs
-  
-
- 
-
- 
-
-		 
-
-
-
- $
-
- '‚
-“C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Model\Item.cs
-
- 
+ 
 
  
 
@@ -116,74 +15,92 @@
 
 
 
- !
+ 
 
- 
+ 
 
- ’
-¨C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Repositories\CategoryRepository.cs
+ "À
+—C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\EntitiesMapping.cs
+
+ )
+
+		  8
+  2
+1 4    
++ /3 7
+" #' (; <
+" #' (3 4
+  $ %
+2 37 8
+A BF G
+  $ %
+3 48 9‘
+–C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\ExchangeModule.cs
+
+ &
 
 
 
- ,–
-) 1  &  #%%" *&&  '' (( ** ++ 11 %772 :<< !== F
-! (  & 22 77 <<4 ;
-2 9 
+) 92
+
+
+R Z    
 
-! ,
-? G: B
- 6 A
- 2 =
+3 ;
+' 4 + 8ó
+¨C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\Interfaces\IItemMessagingService.cs
 
- "(
-' )K M%%W Y&&B D
-    **' /
-> ?C D
-%% &&H W((, ;
-%%< =%%A B
-&& ''' ,
-&&- .&&2 3&&i j
-&&\ ]&&a b
+ *
 
-//' 7
-11 228 B
-119 :11> ?
+ !
 
-55" -
-552 477b d
-77U V77Z [
+* 0
 
-:: "
-::5 =<<O W
-<< >> “
-¤C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\Repositories\ItemRepository.cs
+G P
 
- (x
-) 1  #!! """ (( .. // 55  ;;. 6@@ !KK <
-! (  !## 66 ;; 
-. 5 
+ 
 
- $
-3 71 5(
- K R   !!- 4
-     '
-> ?C D
-!! ##. 5
+		 Ñ
+ªC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\Interfaces\IMessagingConfiguration.cs
 
-&& 
-&&# %((B D
-(( )) .." &
-((5 6((: ;
+ .
 
-33 %
-55 664 9
-55/ 0554 5
+ +
 
-99 $
-99) +;;Y [
-;;L M;;Q R
+ €
+œC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\ItemMessagingService.cs
 
->> F
->>$ (@@E IFF GG! %HH  $II JJ  F
-@@ AA FF GG HH II JJ 
-@@8 9@@= >
+ .(
+& 2  $$ (
+1 H #))# :--+ B(
+* 4 == ?? 
+! ( EE 
+1 < &
+V l& <
+	 ˆ "
+
+ 
+
+"" 
+'' (* >$$* >
+
+''1 7
+''N W++% .,,  
+))  **  *
+** -- 
+++ 00 
+33, >??E W
+33T ]77" +88: C
+;; ,, 
+;;5 >??X a
+CC !++ $
+CC7 ;EE+ /FF "
+EE FF GG9 <
+GG HH* 4å
+žC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.Exchange\MessagingConfiguration.cs
+
+ 0
+
+		5 B
+! 2 
+  
