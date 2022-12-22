@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationInsightsResourceId>/subscriptions/d476937b-6597-4445-8aee-9bf57ff6cf6b/resourceGroups/dotNetAdvanced/providers/microsoft.insights/components/dotNetAdvancedInsights</ApplicationInsightsResourceId>
     <UserSecretsId>d51b2d30-3f83-41d6-b23e-94da548db049</UserSecretsId>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <ItemGroup>

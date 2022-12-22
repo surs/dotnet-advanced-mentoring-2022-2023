@@ -4,8 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationInsightsResourceId>/subscriptions/d476937b-6597-4445-8aee-9bf57ff6cf6b/resourceGroups/dotNetAdvanced/providers/microsoft.insights/components/dotNetAdvancedInsights</ApplicationInsightsResourceId>
-    <UserSecretsId>2bb54274-0f45-4c99-ad66-97a8ce510fe2</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/aaaaa/resourceGroups/dotNetAdvanced/providers/microsoft.insights/components/dotNetAdvancedInsights</ApplicationInsightsResourceId>
+    <UserSecretsId>aaaaa</UserSecretsId>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <ItemGroup>
