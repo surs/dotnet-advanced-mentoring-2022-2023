@@ -1,6 +1,8 @@
-﻿namespace CatalogService.BusinessLayer.Exceptions
+﻿using System.Runtime.Serialization;
+
+namespace CatalogService.BusinessLayer.Exceptions
 {
-    public class CatalogException : Exception
+    public class CatalogException : Exception, ISerializable
     {
         internal static CatalogException CategoryNotFound => new CatalogException("Category not found");
         internal static CatalogException ItemNotFound => new CatalogException("Item not found");

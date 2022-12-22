@@ -8,7 +8,6 @@ namespace CatalogService.Exchange
     {
         public MessagingConfiguration(IConfiguration configuration)
         {
-            //var rabbitConfig = configuration.GetValue<RabbitMqConfiguration>("RabbitMQ");
             ConnectionFactory = new ConnectionFactory { HostName = "localhost" };
             Exchange = "dotnetadvanced.items";
         }

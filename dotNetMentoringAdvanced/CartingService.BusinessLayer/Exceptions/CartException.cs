@@ -1,6 +1,8 @@
-﻿namespace CartingService.BusinessLayer.Exceptions
+﻿using System.Runtime.Serialization;
+
+namespace CartingService.BusinessLayer.Exceptions
 {
-    public class CartException : Exception
+    public class CartException : Exception, ISerializable
     {
         internal static CartException CartNotFound => new CartException("Cart not found");
 

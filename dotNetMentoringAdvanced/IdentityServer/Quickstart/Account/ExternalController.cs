@@ -56,10 +56,10 @@ namespace IdentityServerHost.Quickstart.UI
             if (Url.IsLocalUrl(returnUrl) == false && _interaction.IsValidReturnUrl(returnUrl) == false)
             {
                 // user might have clicked on a malicious link - should be logged
-                throw new Exception("invalid return URL");
+                throw new ArgumentException("invalid return URL");
             }
 
-            // start challenge and roundtrip the return URL and scheme 
+            // start challenge and roundtrip the return URL and scheme
             var props = new AuthenticationProperties
             {
                 RedirectUri = Url.Action(nameof(Callback)),
@@ -84,7 +84,7 @@ namespace IdentityServerHost.Quickstart.UI
             var result = await HttpContext.AuthenticateAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme);
             if (result?.Succeeded != true)
             {
-                throw new Exception("External authentication error");
+                throw new ApplicationException("External authentication error");
             }
 
             if (_logger.IsEnabled(LogLevel.Debug))
@@ -130,14 +130,11 @@ namespace IdentityServerHost.Quickstart.UI
             var context = await _interaction.GetAuthorizationContextAsync(returnUrl);
             await _events.RaiseAsync(new UserLoginSuccessEvent(provider, providerUserId, user.SubjectId, user.Username, true, context?.Client.ClientId));
 
-            if (context != null)
+            if (context?.IsNativeClient() == true)
             {
-                if (context.IsNativeClient())
-                {
-                    // The client is native, so this change in how to
-                    // return the response is for better UX for the end user.
-                    return this.LoadingPage("Redirect", returnUrl);
-                }
+                // The client is native, so this change in how to
+                // return the response is for better UX for the end user.
+                return this.LoadingPage("Redirect", returnUrl);
             }
 
             return Redirect(returnUrl);

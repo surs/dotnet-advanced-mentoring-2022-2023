@@ -69,7 +69,7 @@ namespace CartingService.BusinessLayer.Services
                 throw CartException.CartNotFound;
             }
 
-            var item = cart.CartItems.Where(i => i.Item.Id == itemId).FirstOrDefault();
+            var item = cart.CartItems.FirstOrDefault(i => i.Item.Id == itemId);
             if (item == null)
             {
                 return;

@@ -47,12 +47,15 @@ builder.Services.AddAuthentication("Bearer")
         };
     });
 builder.Services.AddAuthorization();
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+builder.Services.AddApplicationInsightsTelemetry(options =>
+{
+    options.ConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"];
+});
 
 var app = builder.Build();
 
 var messagingService = app.Services.GetService<IItemMessagingService>();
-messagingService.Start();
+messagingService?.Start();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -97,7 +100,7 @@ app.MapPut(singleCategory, [Authorize(Roles = Roles.Manager)] (int id, Category 
         categoryService.UpdateCategory(id, category.Name, category.Image, category.ParentCategory);
         return Results.Ok();
     }
-    catch (CatalogException e)
+    catch (CatalogException)
     {
         return Results.NotFound();
     }
@@ -173,22 +176,16 @@ app.MapGet(singleItem, (int id, IItemService itemService) =>
     }
 });
 
-//app.MapPut(singleItem, [Authorize(Roles = Roles.Manager)] (int id, Item item, [FromHeader(Name = "Correlation-Context")] string correlation, IItemService itemService) =>
 app.MapPut(singleItem, ([FromRoute] int id, [FromBody] Item item, HttpRequest request, IItemService itemService) =>
 {
     try
     {
-        //var id = int.Parse(request.RouteValues["id"]?.ToString() ?? "0");
-        //using var reader = new StreamReader(request.Body);
-        //reader.BaseStream.Seek(0, SeekOrigin.Begin);
-        //var bodyText = reader.ReadToEnd();
-        //var item = JsonConvert.DeserializeObject<Item>(bodyText);
         var haveCorrelation = request.Headers.TryGetValue("Correlation-Context", out var correlation);
         itemService.UpdateItem(id, item.Name, item.Description,
             item.Image, item.Category, item.Price, item.Amount, haveCorrelation ? correlation : string.Empty);
         return Results.Ok();
     }
-    catch (CatalogException e)
+    catch (CatalogException)
     {
         return Results.NotFound();
     }
@@ -205,7 +202,7 @@ app.MapDelete(singleItem, [Authorize(Roles = Roles.Manager)] (int id, IItemServi
         itemService.DeleteItem(id);
         return Results.Ok();
     }
-    catch (CatalogException e)
+    catch (CatalogException)
     {
         return Results.NotFound();
     }

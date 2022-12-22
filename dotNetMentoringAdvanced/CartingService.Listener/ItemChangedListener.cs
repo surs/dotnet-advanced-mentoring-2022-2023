@@ -41,6 +41,10 @@ namespace CartingService.Listener
             var body = e.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
             var itemDto = JsonConvert.DeserializeObject<ItemDto>(message);
+            if (itemDto == null)
+            {
+                return;
+            }
             TrackEvent(itemDto);
             _cartingService.UpdateItemsInBaskets(itemDto.Id, itemDto.Name, itemDto.Description, itemDto.ImageUrl, itemDto.Price);
 
@@ -66,11 +70,6 @@ namespace CartingService.Listener
         {
             if (!disposedValue)
             {
-                if (disposing)
-                {
-
-                }
-
                 _channel?.Dispose();
                 _connection?.Dispose();
                 disposedValue = true;

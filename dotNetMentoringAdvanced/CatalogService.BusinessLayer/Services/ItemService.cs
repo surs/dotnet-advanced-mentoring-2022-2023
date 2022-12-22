@@ -9,7 +9,7 @@ namespace CatalogService.BusinessLayer.Services
     {
         private readonly IItemRepository _itemRepository;
 
-        public event EventHandler<ItemChangedEventArgs> OnItemChanged;
+        public event EventHandler<ItemChangedEventArgs>? OnItemChanged;
 
         public ItemService(IItemRepository itemRepository)
         {

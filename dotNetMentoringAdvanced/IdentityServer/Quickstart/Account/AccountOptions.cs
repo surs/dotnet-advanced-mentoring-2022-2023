@@ -6,7 +6,7 @@ using System;
 
 namespace IdentityServerHost.Quickstart.UI
 {
-    public class AccountOptions
+    public static class AccountOptions
     {
         public static bool AllowLocalLogin = true;
         public static bool AllowRememberLogin = true;

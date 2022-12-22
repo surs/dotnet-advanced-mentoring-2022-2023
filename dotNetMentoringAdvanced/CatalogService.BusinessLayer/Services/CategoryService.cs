@@ -24,7 +24,7 @@ namespace CatalogService.BusinessLayer.Services
             return _categoryRepository.AddCategory(category);
         }
 
-        public Category AddCategory(string name, Uri image, Category parentCategory)
+        public Category AddCategory(string name, Uri? image, Category? parentCategory)
         {
             var category = new Category(0, name, image, parentCategory);
             return AddCategory(category);
@@ -55,7 +55,7 @@ namespace CatalogService.BusinessLayer.Services
             return category;
         }
 
-        public void UpdateCategory(int id, string name, Uri? image, Category parentCategory)
+        public void UpdateCategory(int id, string name, Uri? image, Category? parentCategory)
         {
             var category = new Category(id, name, image, parentCategory);
             _categoryRepository.UpdateCategory(category);

@@ -66,12 +66,23 @@ namespace IdentityServerHost.Quickstart.UI
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Callback(DeviceAuthorizationInputModel model)
+        public Task<IActionResult> Callback(DeviceAuthorizationInputModel model)
         {
-            if (model == null) throw new ArgumentNullException(nameof(model));
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
 
+            return CallbackInternal(model);
+        }
+
+        public async Task<IActionResult> CallbackInternal(DeviceAuthorizationInputModel model)
+        {
             var result = await ProcessConsent(model);
-            if (result.HasValidationError) return View("Error");
+            if (result.HasValidationError)
+            {
+                return View("Error");
+            }
 
             return View("Success");
         }

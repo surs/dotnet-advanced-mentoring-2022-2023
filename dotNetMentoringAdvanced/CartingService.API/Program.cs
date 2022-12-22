@@ -16,12 +16,15 @@ builder.Services.AddSwaggerGen(o =>
 
 });
 builder.Services.RegisterDependencies();
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+builder.Services.AddApplicationInsightsTelemetry(options =>
+{
+    options.ConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"];
+});
 
 var app = builder.Build();
 
 var listener = app.Services.GetService<IItemChangedListener>();
-listener.Start();
+listener?.Start();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

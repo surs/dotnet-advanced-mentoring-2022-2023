@@ -6,7 +6,6 @@ namespace CartingService.Listener
     {
         public MessagingConfiguration()
         {
-            //var rabbitConfig = configuration.GetValue<RabbitMqConfiguration>("RabbitMQ");
             ConnectionFactory = new ConnectionFactory { HostName = "localhost" };
             Queue = "dotnetadvanced.basket.i0";
         }
