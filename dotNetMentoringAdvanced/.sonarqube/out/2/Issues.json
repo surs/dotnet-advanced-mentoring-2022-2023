@@ -20,9 +20,9 @@
               "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
                 "region": {
-                  "startLine": 212,
+                  "startLine": 223,
                   "startColumn": 20,
-                  "endLine": 212,
+                  "endLine": 223,
                   "endColumn": 24
                 }
               }
@@ -45,27 +45,6 @@
                   "startColumn": 17,
                   "endLine": 32,
                   "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Consent/ConsentOptions.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 18,
-                  "endLine": 7,
-                  "endColumn": 32
                 }
               }
             }
@@ -125,10 +104,10 @@
               "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Consent/ConsentOptions.cs",
                 "region": {
-                  "startLine": 11,
+                  "startLine": 10,
                   "startColumn": 30,
-                  "endLine": 11,
-                  "endColumn": 127
+                  "endLine": 10,
+                  "endColumn": 73
                 }
               }
             }
@@ -146,31 +125,10 @@
               "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Consent/ConsentOptions.cs",
                 "region": {
-                  "startLine": 10,
+                  "startLine": 11,
                   "startColumn": 30,
-                  "endLine": 10,
-                  "endColumn": 73
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Program.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 18,
-                  "endLine": 14,
-                  "endColumn": 25
+                  "endLine": 11,
+                  "endColumn": 127
                 }
               }
             }
@@ -222,6 +180,27 @@
           }
         },
         {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_logger' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 52,
+                  "endLine": 29,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S1104",
           "level": "warning",
           "message": "Make this field 'private' and encapsulate it in a 'public' property.",
@@ -234,48 +213,6 @@
                   "startColumn": 28,
                   "endLine": 11,
                   "endColumn": 50
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 18,
-                  "endLine": 9,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S2223",
-          "level": "warning",
-          "message": "Change the visibility of 'AllowLocalLogin' or make it 'const' or 'readonly'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 28,
-                  "endLine": 11,
-                  "endColumn": 43
                 }
               }
             }
@@ -318,6 +255,27 @@
                   "startColumn": 28,
                   "endLine": 12,
                   "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of 'AllowLocalLogin' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 28,
+                  "endLine": 11,
+                  "endColumn": 43
                 }
               }
             }
@@ -377,27 +335,6 @@
               "resultFile": {
                 "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
                 "region": {
-                  "startLine": 13,
-                  "startColumn": 32,
-                  "endLine": 13,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1104",
-          "level": "warning",
-          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
-                "region": {
                   "startLine": 16,
                   "startColumn": 28,
                   "endLine": 16,
@@ -423,6 +360,27 @@
                   "startColumn": 28,
                   "endLine": 16,
                   "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountOptions.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 32,
+                  "endLine": 13,
+                  "endColumn": 79
                 }
               }
             }
@@ -497,37 +455,16 @@
         {
           "ruleId": "S4487",
           "level": "warning",
-          "message": "Remove this unread private field '_logger' or refactor the code to use its value.",
+          "message": "Remove this unread private field '_clientStore' or refactor the code to use its value.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/ExternalController.cs",
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 52,
-                  "endLine": 29,
-                  "endColumn": 59
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/TestUsers.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 18,
-                  "endLine": 15,
-                  "endColumn": 27
+                  "startLine": 26,
+                  "startColumn": 39,
+                  "endLine": 26,
+                  "endColumn": 51
                 }
               }
             }
@@ -579,17 +516,17 @@
           }
         },
         {
-          "ruleId": "S4487",
+          "ruleId": "S4792",
           "level": "warning",
-          "message": "Remove this unread private field '_clientStore' or refactor the code to use its value.",
+          "message": "Make sure that this logger's configuration is safe.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/ExternalController.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Program.cs",
                 "region": {
-                  "startLine": 26,
-                  "startColumn": 39,
-                  "endLine": 26,
+                  "startLine": 18,
+                  "startColumn": 26,
+                  "endLine": 18,
                   "endColumn": 51
                 }
               }
@@ -612,27 +549,6 @@
                   "startColumn": 25,
                   "endLine": 35,
                   "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4792",
-          "level": "warning",
-          "message": "Make sure that this logger's configuration is safe.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Program.cs",
-                "region": {
-                  "startLine": 18,
-                  "startColumn": 26,
-                  "endLine": 18,
-                  "endColumn": 51
                 }
               }
             }
@@ -705,27 +621,6 @@
           }
         },
         {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/ExternalController.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 23,
-                  "endLine": 59,
-                  "endColumn": 58
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1125",
           "level": "warning",
           "message": "Remove the unnecessary Boolean literal(s).",
@@ -738,48 +633,6 @@
                   "startColumn": 64,
                   "endLine": 19,
                   "endColumn": 69
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
-                "region": {
-                  "startLine": 103,
-                  "startColumn": 63,
-                  "endLine": 103,
-                  "endColumn": 68
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Consent/ConsentController.cs",
-                "region": {
-                  "startLine": 121,
-                  "startColumn": 63,
-                  "endLine": 121,
-                  "endColumn": 68
                 }
               }
             }
@@ -970,61 +823,6 @@
           }
         },
         {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountController.cs",
-                "region": {
-                  "startLine": 186,
-                  "startColumn": 40,
-                  "endLine": 186,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4457",
-          "level": "warning",
-          "message": "Split this method into two, one handling parameters check and the other handling the asynchronous code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
-                "region": {
-                  "startLine": 69,
-                  "startColumn": 42,
-                  "endLine": 69,
-                  "endColumn": 50
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
-                "region": {
-                  "startLine": 71,
-                  "startColumn": 38,
-                  "endLine": 71,
-                  "endColumn": 78
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1116",
           "level": "warning",
           "message": "Remove this empty statement.",
@@ -1046,64 +844,9 @@
           }
         },
         {
-          "ruleId": "S1066",
-          "level": "warning",
-          "message": "Merge this if statement with the enclosing one.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/ExternalController.cs",
-                "region": {
-                  "startLine": 135,
-                  "startColumn": 17,
-                  "endLine": 135,
-                  "endColumn": 19
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/ExternalController.cs",
-                "region": {
-                  "startLine": 133,
-                  "startColumn": 13,
-                  "endLine": 133,
-                  "endColumn": 15
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S112",
           "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountController.cs",
-                "region": {
-                  "startLine": 163,
-                  "startColumn": 31,
-                  "endLine": 163,
-                  "endColumn": 66
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
           "locations": [
             {
               "resultFile": {
@@ -1112,7 +855,70 @@
                   "startLine": 87,
                   "startColumn": 23,
                   "endLine": 87,
-                  "endColumn": 69
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Account/AccountController.cs",
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 40,
+                  "endLine": 185,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Device/DeviceController.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 63,
+                  "endLine": 114,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/IdentityServer/Quickstart/Consent/ConsentController.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 63,
+                  "endLine": 121,
+                  "endColumn": 68
                 }
               }
             }
@@ -1123,23 +929,6 @@
         }
       ],
       "rules": {
-        "S1066": {
-          "id": "S1066",
-          "shortDescription": "Collapsible \"if\" statements should be merged",
-          "fullDescription": "Merging collapsible if statements increases the code’s readability.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1066",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S1104": {
           "id": "S1104",
           "shortDescription": "Fields should not have public accessibility",
@@ -1164,23 +953,6 @@
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1116",
           "properties": {
             "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S1118": {
-          "id": "S1118",
-          "shortDescription": "Utility classes should not have public constructors",
-          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
-          "properties": {
-            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
@@ -1298,23 +1070,6 @@
           "properties": {
             "category": "Critical Code Smell",
             "isEnabledByDefault": false,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S4457": {
-          "id": "S4457",
-          "shortDescription": "Parameter validation in \"async\"/\"await\" methods should be wrapped",
-          "fullDescription": "Because of the way async/await methods are rewritten by the compiler, any exceptions thrown during the parameters check will happen only when the task is observed. That could happen far away from the source of the buggy code or never happen for fire-and-forget tasks.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4457",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",

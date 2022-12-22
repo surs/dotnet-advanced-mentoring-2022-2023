@@ -1,60 +1,325 @@
-⁄
-†C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\BusinessLayerModule.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-{ 
-public 
-
-static 
-class 
-BusinessLayerModule +
-{ 
-public		 
-static		 
-IServiceCollection		 (!
-RegisterBusinessLayer		) >
-(		> ?
-this		? C
-IServiceCollection		D V
-services		W _
-)		_ `
-{
-
- 	
-services 
-. 
-AddSingleton !
-<! "
-ICategoryService" 2
-,2 3
-CategoryService4 C
->C D
-(D E
-)E F
-;F G
-services 
-. 
-AddSingleton !
-<! "
-IItemService" .
-,. /
-ItemService0 ;
->; <
-(< =
-)= >
-;> ?
-return 
-services 
-; 
-} 	
-} 
-} ó
-ûC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Entities\Category.cs
+Ø
+üC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\BusinesLayerModule.cs
 	namespace 	
-CatalogService
+CartingService
+ 
+. 
+BusinessLayer &
+{ 
+public 
+
+static 
+class 
+BusinesLayerModule *
+{ 
+public 
+static 
+IServiceCollection (!
+RegisterBusinessLayer) >
+(> ?
+this? C
+IServiceCollectionD V
+servicesW _
+)_ `
+{		 	
+services
+
+ 
+. 
+AddTransient 
+< 
+ICartingService -
+,- .
+Services/ 7
+.7 8
+CartingService8 F
+>F G
+(G H
+)H I
+;I J
+return 
+services 
+; 
+} 	
+} 
+} ã
+£C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\CartAggregate.cs
+	namespace 	
+CartingService
+ 
+. 
+BusinessLayer &
+.& '
+Entities' /
+{ 
+public 
+
+sealed 
+record 
+CartAggregate &
+(& '
+Guid' +
+CartKey, 3
+,3 4
+List5 9
+<9 :
+CartItem: B
+>B C
+	CartItemsD M
+)M N
+{ 
+public 
+CartAggregate 
+( 
+Guid !
+cartKey" )
+)) *
+:+ ,
+this- 1
+(1 2
+cartKey2 9
+,9 :
+new; >
+List? C
+<C D
+CartItemD L
+>L M
+(M N
+)N O
+)O P
+{Q R
+}S T
+public 
+void 
+AddItem 
+( 
+Item  
+item! %
+,% &
+int' *
+quantity+ 3
+)3 4
+{ 	
+var		 
+cartItem		 
+=		 
+	CartItems		 $
+.		$ %
+SingleOrDefault		% 4
+(		4 5
+ci		5 7
+=>		8 :
+ci		; =
+.		= >
+Item		> B
+.		B C
+Id		C E
+==		F H
+item		I M
+.		M N
+Id		N P
+)		P Q
+;		Q R
+if
+
+ 
+(
+
+ 
+cartItem
+
+ 
+!=
+
+ 
+null
+
+  
+)
+
+  !
+{ 
+	CartItems 
+. 
+Remove  
+(  !
+cartItem! )
+)) *
+;* +
+cartItem 
+= 
+cartItem #
+with$ (
+{) *
+Quantity+ 3
+=4 5
+cartItem6 >
+.> ?
+Quantity? G
++H I
+quantityJ R
+}S T
+;T U
+} 
+else 
+{ 
+cartItem 
+= 
+new 
+CartItem '
+(' (
+item( ,
+,, -
+quantity. 6
+)6 7
+;7 8
+} 
+	CartItems 
+. 
+Add 
+( 
+cartItem "
+)" #
+;# $
+} 	
+public 
+void 
+
+RemoveItem 
+( 
+Item #
+item$ (
+,( )
+int* -
+quantity. 6
+)6 7
+{ 	
+var 
+cartItem 
+= 
+	CartItems $
+.$ %
+SingleOrDefault% 4
+(4 5
+ci5 7
+=>8 :
+ci; =
+.= >
+Item> B
+.B C
+IdC E
+==F H
+itemI M
+.M N
+IdN P
+)P Q
+;Q R
+if 
+( 
+cartItem 
+== 
+null  
+)  !
+{ 
+return 
+; 
+} 
+	CartItems 
+. 
+Remove 
+( 
+cartItem %
+)% &
+;& '
+if   
+(   
+cartItem   
+.   
+Quantity   !
+-  " #
+quantity  $ ,
+<=  - /
+$num  0 1
+)  1 2
+{!! 
+return"" 
+;"" 
+}## 
+cartItem%% 
+=%% 
+cartItem%% 
+with%%  $
+{%%% &
+Quantity%%' /
+=%%0 1
+cartItem%%2 :
+.%%: ;
+Quantity%%; C
+-%%D E
+quantity%%F N
+}%%O P
+;%%P Q
+	CartItems&& 
+.&& 
+Add&& 
+(&& 
+cartItem&& "
+)&&" #
+;&&# $
+}'' 	
+}(( 
+})) £
+ûC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\CartItem.cs
+	namespace 	
+CartingService
+ 
+. 
+BusinessLayer &
+.& '
+Entities' /
+{ 
+public 
+
+sealed 
+record 
+CartItem !
+(! "
+Item" &
+Item' +
+,+ ,
+int- 0
+Quantity1 9
+)9 :
+{ 
+} 
+} ú
+õC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\Image.cs
+	namespace 	
+CartingService
+ 
+. 
+BusinessLayer &
+.& '
+Entities' /
+{ 
+public 
+
+sealed 
+record 
+Image 
+( 
+string %
+url& )
+,) *
+string+ 1
+alt2 5
+)5 6
+{ 
+} 
+} Ñ
+öC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\Item.cs
+	namespace 	
+CartingService
  
 . 
 BusinessLayer &
@@ -63,398 +328,123 @@
 { 
 public 
 
-record 
-Category 
-( 
-int 
-Id !
-,! "
-string# )
-Name* .
-,. /
-Uri0 3
-?3 4
-Image5 :
-,: ;
-Category< D
-?D E
-ParentCategoryF T
-)T U
+sealed 
+record 
+Item 
+( 
+int !
+Id" $
+,$ %
+string& ,
+Name- 1
+,1 2
+Image3 8
+?8 9
+Image: ?
+,? @
+decimalA H
+PriceI N
+)N O
 { 
 internal 
 static 
 
 IValidator "
-<" #
-Category# +
->+ ,
-	Validator- 6
-=>7 9
-new: =
-CategoryValidator> O
-(O P
-)P Q
-;Q R
+<" #
+Item# '
+>' (
+	Validator) 2
+=>3 5
+new6 9
+ItemValidator: G
+(G H
+)H I
+;I J
 }		 
 }
 
- ®
-öC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Entities\Item.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-Entities' /
-{ 
-public 
-
-record 
-Item 
-( 
-int 
-Id 
-, 
-string %
-Name& *
-,* +
-string, 2
-?2 3
-Description4 ?
-,? @
-Uri 
-? 
-Image 
-, 
-Category 
-Category %
-,% &
-decimal' .
-Price/ 4
-,4 5
-int6 9
-Amount: @
-)@ A
-{ 
-internal		 
-static		 
-
-IValidator		 "
-<		" #
-Item		# '
->		' (
-	Validator		) 2
-=>		3 5
-new		6 9
-ItemValidator		: G
-(		G H
-)		H I
-;		I J
-}
-
- 
-} ”
-´C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\EventArgs\ItemChangedEventArgs.cs
+ ‚
+•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Exceptions\CartException.cs
 	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-	EventArgs' 0
-{ 
-public 
-
-class  
-ItemChangedEventArgs %
-:& '
-System( .
-.. /
-	EventArgs/ 8
-{ 
-public 
-Item 
-? 
-ChangedItem  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-public 
-string 
-? 
-Correlation "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-}		 
-}
-
- ±
-®C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Exceptions\CatalogException.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-
-Exceptions' 1
-{ 
-public 
-
-class 
-CatalogException !
-:" #
-	Exception$ -
-{ 
-internal 
-static 
-CatalogException (
-CategoryNotFound) 9
-=>: <
-new= @
-CatalogExceptionA Q
-(Q R
-$strR f
-)f g
-;g h
-internal 
-static 
-CatalogException (
-ItemNotFound) 5
-=>6 8
-new9 <
-CatalogException= M
-(M N
-$strN ^
-)^ _
-;_ `
-public 
-CatalogException 
-(  
-string  &
-?& '
-message( /
-,/ 0
-	Exception1 :
-?: ;
-innerException< J
-)J K
-:L M
-baseN R
-(R S
-messageS Z
-,Z [
-innerException\ j
-)j k
-{		 	
-} 	
-public 
-CatalogException 
-(  
-string  &
-?& '
-message( /
-)/ 0
-:1 2
-base3 7
-(7 8
-message8 ?
-)? @
-{ 	
-} 	
-public 
-CatalogException 
-(  
-)  !
-:" #
-base$ (
-(( )
-)) *
-{ 	
-} 	
-} 
-} ‹
-´C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\ICategoryRepository.cs
-	namespace 	
-CatalogService
+CartingService
  
 . 
 BusinessLayer &
 .& '
 
-Interfaces' 1
+Exceptions' 1
 { 
 public 
-
-	interface 
-ICategoryRepository (
+
+class 
+CartException 
+:  
+	Exception! *
+,* +
+ISerializable, 9
 { 
-Category 
-? 
-GetCategory 
-( 
-int !
-id" $
-)$ %
-;% &
-List 
-< 
-Category 
-> 
-GetAllCategories '
-(' (
-)( )
-;) *
-Category		 
-AddCategory		 
-(		 
-Category		 %
-category		& .
-)		. /
-;		/ 0
-bool
+internal 
+static 
+CartException %
+CartNotFound& 2
+=>3 5
+new6 9
+CartException: G
+(G H
+$strH X
+)X Y
+;Y Z
+public		 
+CartException		 
+(		 
+string		 #
+?		# $
+message		% ,
+,		, -
+	Exception		. 7
+?		7 8
+innerException		9 G
+)		G H
+:		I J
+base		K O
+(		O P
+message		P W
+,		W X
+innerException		Y g
+)		g h
+{
 
- 
-UpdateCategory
-
- 
-(
-
- 
-Category
-
- $
-category
-
-% -
-)
-
-- .
-;
-
-. /
-bool 
-DeleteCategory 
-( 
-int 
-id  "
-)" #
-;# $
-} 
-} Á
-®C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\ICategoryService.cs
+ 	
+} 	
+public 
+CartException 
+( 
+string #
+?# $
+message% ,
+), -
+:. /
+base0 4
+(4 5
+message5 <
+)< =
+{ 	
+} 	
+public 
+CartException 
+( 
+) 
+:  
+base! %
+(% &
+)& '
+{ 	
+} 	
+} 
+} ®
+ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Interfaces\ICartingService.cs
 	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-
-Interfaces' 1
-{ 
-public 
-
-	interface 
-ICategoryService %
-{ 
-List 
-< 
-Category 
-> 
-GetCategories $
-($ %
-)% &
-;& '
-Category 
-GetCategory 
-( 
-int  
-id! #
-)# $
-;$ %
-Category		 
-AddCategory		 
-(		 
-Category		 %
-category		& .
-)		. /
-;		/ 0
-Category
-
- 
-AddCategory
-
- 
-(
-
- 
-string
-
- #
-name
-
-$ (
-,
-
-( )
-Uri
-
-* -
-image
-
-. 3
-,
-
-3 4
-Category
-
-5 =
-parentCategory
-
-> L
-)
-
-L M
-;
-
-M N
-void 
-UpdateCategory 
-( 
-int 
-id  "
-," #
-string$ *
-name+ /
-,/ 0
-Uri1 4
-?4 5
-image6 ;
-,; <
-Category= E
-parentCategoryF T
-)T U
-;U V
-void 
-DeleteCategory 
-( 
-int 
-id  "
-)" #
-;# $
-} 
-} î
-ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\IItemRepository.cs
-	namespace 	
-CatalogService
+CartingService
  
 . 
 BusinessLayer &
@@ -465,191 +455,208 @@ Interfaces' 1
 public 
 
 	interface 
-IItemRepository $
+ICartingService $
 { 
-Item 
-GetItem 
-( 
-int 
-id 
-) 
-; 
+void 
+
+CreateCart 
+( 
+Guid 
+cartKey $
+)$ %
+;% &
 List 
-< 
-Item 
-> 
-GetAllItems 
-( 
-)  
-;  !
-Item		 
-AddItem		 
-(		 
-Item		 
-Item		 
-)		 
-;		  
-bool
+< 
+CartItem 
+> 
+GetCartItems #
+(# $
+Guid$ (
+cartKey) 0
+)0 1
+;1 2
+void		 
+AddItemToCart		 
+(		 
+Guid		 
+cartKey		  '
+,		' (
+Item		) -
+item		. 2
+,		2 3
+int		4 7
+quantity		8 @
+)		@ A
+;		A B
+void
+
+ 
+RemoveItemFromCart
+
+ 
+(
+
+  
+Guid
+
+  $
+cartKey
+
+% ,
+,
+
+, -
+Item
+
+. 2
+item
+
+3 7
+,
+
+7 8
+int
+
+9 <
+quantity
+
+= E
+)
+
+E F
+;
+
+F G
+void 
+RemoveItemFromCart 
+(  
+Guid  $
+cartKey% ,
+,, -
+int. 1
+itemId2 8
+,8 9
+int: =
+quantity> F
+)F G
+;G H
+void  
+UpdateItemsInBaskets !
+(! "
+int" %
+id& (
+,( )
+string* 0
+name1 5
+,5 6
+string7 =
+?= >
+description? J
+,J K
+stringL R
+?R S
+imageUrlT \
+,\ ]
+decimal^ e
+pricef k
+)k l
+;l m
+} 
+} ¿
+ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Interfaces\ICartRepository.cs
+	namespace 	
+CartingService
+ 
+. 
+BusinessLayer &
+.& '
+
+Interfaces' 1
+{ 
+public 
+
+	interface 
+ICartRepository $
+{ 
+CartAggregate 
+GetCart 
+( 
+Guid "
+cartKey# *
+)* +
+;+ ,
+void 
+
+UpdateCart 
+( 
+CartAggregate %
+cart& *
+)* +
+;+ ,
+CartAggregate		 
+
+CreateCart		  
+(		  !
+Guid		! %
+cartKey		& -
+)		- .
+;		. /
+void
 
  
 
-UpdateItem
+RemoveCart
 
  
 (
 
- 
-Item
+ 
+CartAggregate
 
- 
-Item
+ %
+cart
 
- !
+& *
 )
 
-! "
+* +
 ;
 
-" #
-bool 
++ ,
+void 
 
-DeleteItem 
-( 
-int 
-id 
-) 
-;  
-} 
-} †
-§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\IItemService.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-
-Interfaces' 1
-{ 
-public 
-
-	interface 
-IItemService !
-{ 
-event 
-EventHandler 
-<  
-ItemChangedEventArgs /
->/ 0
-OnItemChanged1 >
-;> ?
-List		 
-<		 
-Item		 
->		 
-GetItems		 
-(		 
-)		 
-;		 
-Item
-
- 
-GetItem
-
- 
-(
-
- 
-int
-
- 
-id
-
- 
-)
-
- 
-;
-
- 
-Item 
-AddItem 
-( 
-Item 
-Item 
-) 
-;  
-Item 
-AddItem 
-( 
-string 
-name  
-,  !
-string" (
-?( )
-description* 5
-,5 6
-Uri7 :
-?: ;
-image< A
-,A B
-Category 
-category 
-, 
-decimal &
-price' ,
-,, -
-int. 1
-amount2 8
-)8 9
-;9 :
-void 
-
-UpdateItem 
-( 
-int 
-id 
-, 
-string  &
-name' +
-,+ ,
-string- 3
-?3 4
-description5 @
-,@ A
-UriB E
-?E F
-imageG L
-,L M
-Category 
-category 
-, 
-decimal &
-price' ,
-,, -
-int. 1
-amount2 8
-,8 9
-string: @
-?@ A
-correlationB M
-=N O
-nullP T
-)T U
-;U V
-void 
-
-DeleteItem 
-( 
-int 
-id 
-) 
-;  
-} 
-} Ö(
-•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Services\CategoryService.cs
+RemoveCart 
+( 
+Guid 
+cartKey $
+)$ %
+;% &
+void 
+UpdateBasketsItems 
+(  
+int  #
+itemId$ *
+,* +
+string, 2
+name3 7
+,7 8
+string9 ?
+?? @
+descriptionA L
+,L M
+stringN T
+?T U
+imageUrlV ^
+,^ _
+decimal` g
+priceh m
+)m n
+;n o
+} 
+} È=
+§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Services\CartingService.cs
 	namespace 	
-CatalogService
+CartingService
  
 . 
 BusinessLayer &
@@ -658,618 +665,443 @@ DeleteItem 
 { 
 internal 
 sealed 
-class 
-CategoryService )
-:* +
-ICategoryService, <
+class 
+CartingService (
+:) *
+ICartingService+ :
 { 
 private		 
-readonly		 
-ICategoryRepository		 ,
-_categoryRepository		- @
-;		@ A
-public 
-CategoryService 
-( 
-ICategoryRepository 2
-categoryRepository3 E
-)E F
-{ 	
-_categoryRepository 
-=  !
-categoryRepository" 4
-;4 5
+readonly		 
+ICartRepository		 (
+_repository		) 4
+;		4 5
+public 
+CartingService 
+( 
+ICartRepository -
+
+repository. 8
+)8 9
+{ 	
+_repository 
+= 
+
+repository $
+;$ %
 } 	
-public 
-Category 
-AddCategory #
-(# $
-Category$ ,
-category- 5
-)5 6
-{ 	
-FluentValidation 
-. 
-Results $
-.$ %
-ValidationResult% 5
-validationResult6 F
-=G H
-CategoryI Q
-.Q R
-	ValidatorR [
-.[ \
-Validate\ d
-(d e
-categorye m
-)m n
-;n o
-if 
-( 
-! 
-validationResult !
-.! "
-IsValid" )
-)) *
-{ 
-throw 
-new 
-CatalogException *
-(* +
-string+ 1
-.1 2
-Join2 6
-(6 7
-Environment7 B
-.B C
-NewLineC J
-,J K
-validationResultL \
-.\ ]
-Errors] c
-.c d
-Selectd j
-(j k
-ek l
-=>m o
-ep q
-.q r
-ErrorMessager ~
-)~ 
-)	 Ä
-)
-Ä Å
-;
-Å Ç
-} 
-return 
-_categoryRepository &
-.& '
-AddCategory' 2
-(2 3
-category3 ;
-); <
-;< =
-} 	
-public 
-Category 
-AddCategory #
-(# $
-string$ *
-name+ /
-,/ 0
-Uri1 4
-image5 :
-,: ;
-Category< D
-parentCategoryE S
-)S T
-{ 	
-var 
-category 
-= 
-new 
-Category '
-(' (
-$num( )
-,) *
-name+ /
-,/ 0
-image1 6
-,6 7
-parentCategory8 F
-)F G
-;G H
-return 
-AddCategory 
-( 
-category '
-)' (
-;( )
-} 	
-public!! 
-void!! 
-DeleteCategory!! "
-(!!" #
-int!!# &
-id!!' )
-)!!) *
-{"" 	
-var## 
-deleted## 
-=## 
-_categoryRepository## -
-.##- .
-DeleteCategory##. <
-(##< =
-id##= ?
-)##? @
-;##@ A
-if$$ 
-($$ 
-!$$ 
-deleted$$ 
-)$$ 
-{%% 
-throw&& 
-CatalogException&& &
-.&&& '
-CategoryNotFound&&' 7
-;&&7 8
-}'' 
-}(( 	
-public** 
-List** 
-<** 
-Category** 
->** 
-GetCategories** +
-(**+ ,
-)**, -
-{++ 	
-return,, 
-_categoryRepository,, &
-.,,& '
-GetAllCategories,,' 7
-(,,7 8
-),,8 9
-;,,9 :
-}-- 	
-public// 
-Category// 
-GetCategory// #
-(//# $
-int//$ '
-id//( *
-)//* +
-{00 	
-var11 
-category11 
-=11 
-_categoryRepository11 .
-.11. /
-GetCategory11/ :
-(11: ;
-id11; =
-)11= >
-;11> ?
-if22 
-(22 
-category22 
-==22 
-null22  
-)22  !
-{33 
-throw44 
-CatalogException44 &
-.44& '
-CategoryNotFound44' 7
-;447 8
-}55 
-return77 
-category77 
-;77 
-}88 	
-public:: 
-void:: 
-UpdateCategory:: "
-(::" #
-int::# &
-id::' )
-,::) *
-string::+ 1
-name::2 6
-,::6 7
-Uri::8 ;
-?::; <
-image::= B
-,::B C
-Category::D L
-parentCategory::M [
-)::[ \
-{;; 	
-var<< 
-category<< 
-=<< 
-new<< 
-Category<< '
-(<<' (
-id<<( *
-,<<* +
-name<<, 0
-,<<0 1
-image<<2 7
-,<<7 8
-parentCategory<<9 G
-)<<G H
-;<<H I
-_categoryRepository== 
-.==  
-UpdateCategory==  .
-(==. /
-category==/ 7
-)==7 8
-;==8 9
-}>> 	
-}?? 
-}@@ †0
-°C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Services\ItemService.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-Services' /
-{ 
-internal 
-sealed 
-class 
-ItemService %
-:& '
-IItemService( 4
-{		 
-private
-
- 
-readonly
-
- 
-IItemRepository
-
- (
-_itemRepository
-
-) 8
-;
-
-8 9
-public 
-event 
-EventHandler !
-<! " 
-ItemChangedEventArgs" 6
->6 7
-OnItemChanged8 E
-;E F
-public 
-ItemService 
-( 
-IItemRepository *
-itemRepository+ 9
-)9 :
-{ 	
-_itemRepository 
-= 
-itemRepository ,
-;, -
-} 	
-public 
-Item 
-AddItem 
-( 
-Item  
-Item! %
-)% &
-{ 	
-FluentValidation 
-. 
-Results $
-.$ %
-ValidationResult% 5
-validationResult6 F
-=G H
-ItemI M
-.M N
-	ValidatorN W
-.W X
-ValidateX `
-(` a
-Itema e
-)e f
-;f g
-if 
-( 
-! 
-validationResult !
-.! "
-IsValid" )
-)) *
-{ 
-throw 
-new 
-CatalogException *
-(* +
-string+ 1
-.1 2
-Join2 6
-(6 7
-Environment7 B
-.B C
-NewLineC J
-,J K
-validationResultL \
-.\ ]
-Errors] c
-.c d
-Selectd j
-(j k
-ek l
-=>m o
-ep q
-.q r
-ErrorMessager ~
-)~ 
-)	 Ä
-)
-Ä Å
-;
-Å Ç
-} 
-return 
-_itemRepository "
-." #
-AddItem# *
-(* +
-Item+ /
-)/ 0
-;0 1
-} 	
-public 
-Item 
-AddItem 
-( 
-string "
-name# '
-,' (
-string) /
-?/ 0
-description1 <
-,< =
-Uri> A
-?A B
-imageC H
-,H I
-CategoryJ R
-categoryS [
-,[ \
-decimal] d
-pricee j
-,j k
-intl o
-amountp v
-)v w
-{ 	
-var   
-Item   
-=   
-new   
-Item   
-(    
-$num    !
-,  ! "
-name  # '
-,  ' (
-description  ) 4
-,  4 5
-image  6 ;
-,  ; <
-category  = E
-,  E F
-price  G L
-,  L M
-amount  N T
-)  T U
-;  U V
-return!! 
-AddItem!! 
-(!! 
-Item!! 
-)!!  
-;!!  !
-}"" 	
-public$$ 
-void$$ 
+public 
+void 
+AddItemToCart !
+(! "
+Guid" &
+cartKey' .
+,. /
+Item0 4
+item5 9
+,9 :
+int; >
+quantity? G
+)G H
+{ 	
+if 
+( 
+quantity 
+<= 
+$num 
+) 
+{ 
+throw 
+new 
+CartException '
+(' (
+$str( M
+)M N
+;N O
+} 
+FluentValidation 
+. 
+Results $
+.$ %
+ValidationResult% 5
+validationResult6 F
+=G H
+ItemI M
+.M N
+	ValidatorN W
+.W X
+ValidateX `
+(` a
+itema e
+)e f
+;f g
+if 
+( 
+! 
+validationResult !
+.! "
+IsValid" )
+)) *
+{ 
+throw 
+new 
+CartException '
+(' (
+string( .
+.. /
+Join/ 3
+(3 4
+Environment4 ?
+.? @
+NewLine@ G
+,G H
+validationResultI Y
+.Y Z
+ErrorsZ `
+.` a
+Selecta g
+(g h
+eh i
+=>j l
+em n
+.n o
+ErrorMessageo {
+){ |
+)| }
+)} ~
+;~ 
+} 
+var 
+cart 
+= 
+_repository "
+." #
+GetCart# *
+(* +
+cartKey+ 2
+)2 3
+;3 4
+if 
+( 
+cart 
+== 
+null 
+) 
+{ 
+cart 
+= 
+_repository "
+." #
 
-DeleteItem$$ 
-($$ 
-int$$ "
-id$$# %
-)$$% &
-{%% 	
-var&& 
-deleted&& 
-=&& 
-_itemRepository&& )
-.&&) *
+CreateCart# -
+(- .
+cartKey. 5
+)5 6
+;6 7
+}   
+cart"" 
+."" 
+AddItem"" 
+("" 
+item"" 
+,"" 
+quantity"" '
+)""' (
+;""( )
+_repository## 
+.## 
 
-DeleteItem&&* 4
-(&&4 5
-id&&5 7
-)&&7 8
-;&&8 9
-if'' 
-('' 
-!'' 
-deleted'' 
-)'' 
-{(( 
-throw)) 
-CatalogException)) &
-.))& '
-ItemNotFound))' 3
-;))3 4
-}** 
-}++ 	
-public-- 
-List-- 
-<-- 
-Item-- 
->-- 
-GetItems-- "
-(--" #
-)--# $
-{.. 	
-return// 
-_itemRepository// "
-.//" #
-GetAllItems//# .
-(//. /
-)/// 0
-;//0 1
-}00 	
-public22 
-Item22 
-GetItem22 
-(22 
-int22 
-id22  "
-)22" #
-{33 	
-var44 
-Item44 
-=44 
-_itemRepository44 &
-.44& '
-GetItem44' .
-(44. /
-id44/ 1
-)441 2
-;442 3
-if55 
-(55 
-Item55 
-==55 
-null55 
-)55 
-{66 
-throw77 
-CatalogException77 &
-.77& '
-ItemNotFound77' 3
-;773 4
-}88 
-return:: 
-Item:: 
-;:: 
-};; 	
-public== 
-void== 
+UpdateCart## "
+(##" #
+cart### '
+)##' (
+;##( )
+}$$ 	
+public&& 
+void&& 
 
-UpdateItem== 
-(== 
-int== "
-id==# %
-,==% &
-string==' -
-name==. 2
-,==2 3
-string==4 :
-?==: ;
-description==< G
-,==G H
-Uri==I L
-?==L M
-image==N S
-,==S T
-Category==U ]
-category==^ f
-,==f g
-decimal==h o
-price==p u
-,==u v
-int==w z
-amount	=={ Å
-,
-==Å Ç
-string
-==É â
-?
-==â ä
-correlation
-==ã ñ
-=
-==ó ò
-null
-==ô ù
-)
-==ù û
-{>> 	
-var?? 
-item?? 
-=?? 
-new?? 
-Item?? 
-(??  
-id??  "
-,??" #
-name??$ (
-,??( )
-description??* 5
-,??5 6
-image??7 <
-,??< =
-category??> F
-,??F G
-price??H M
-,??M N
-amount??O U
-)??U V
-;??V W
-_itemRepository@@ 
-.@@ 
+CreateCart&& 
+(&& 
+Guid&& #
+cartKey&&$ +
+)&&+ ,
+{'' 	
+_repository(( 
+.(( 
 
-UpdateItem@@ &
+CreateCart(( "
+(((" #
+cartKey((# *
+)((* +
+;((+ ,
+})) 	
+public++ 
+List++ 
+<++ 
+CartItem++ 
+>++ 
+GetCartItems++ *
+(++* +
+Guid+++ /
+cartKey++0 7
+)++7 8
+{,, 	
+var-- 
+cart-- 
+=-- 
+_repository-- "
+.--" #
+GetCart--# *
+(--* +
+cartKey--+ 2
+)--2 3
+;--3 4
+if.. 
+(.. 
+cart.. 
+==.. 
+null.. 
+).. 
+{// 
+throw00 
+CartException00 #
+.00# $
+CartNotFound00$ 0
+;000 1
+}11 
+return22 
+cart22 
+.22 
+	CartItems22 !
+;22! "
+}33 	
+public55 
+void55 
+RemoveItemFromCart55 &
+(55& '
+Guid55' +
+cartKey55, 3
+,553 4
+Item555 9
+item55: >
+,55> ?
+int55@ C
+quantity55D L
+)55L M
+{66 	
+var77 
+cart77 
+=77 
+_repository77 "
+.77" #
+GetCart77# *
+(77* +
+cartKey77+ 2
+)772 3
+;773 4
+if88 
+(88 
+cart88 
+==88 
+null88 
+)88 
+{99 
+throw:: 
+CartException:: #
+.::# $
+CartNotFound::$ 0
+;::0 1
+};; 
+
+RemoveItem== 
+(== 
+item== 
+,== 
+quantity== %
+,==% &
+cart==' +
+)==+ ,
+;==, -
+}>> 	
+public@@ 
+void@@ 
+RemoveItemFromCart@@ &
 (@@& '
-item@@' +
-)@@+ ,
-;@@, -
-OnItemChangedAA 
-?AA 
-.AA 
-InvokeAA !
-(AA! "
-thisAA" &
-,AA& '
-newAA( + 
-ItemChangedEventArgsAA, @
-{AAA B
-ChangedItemAAC N
-=AAO P
-itemAAQ U
-,AAU V
-CorrelationAAW b
-=AAc d
-correlationAAe p
-}AAq r
-)AAr s
-;AAs t
-}BB 	
-}DD 
-}EE ¡
-©C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Validators\CategoryValidator.cs
+Guid@@' +
+cartKey@@, 3
+,@@3 4
+int@@5 8
+itemId@@9 ?
+,@@? @
+int@@A D
+quantity@@E M
+)@@M N
+{AA 	
+varBB 
+cartBB 
+=BB 
+_repositoryBB "
+.BB" #
+GetCartBB# *
+(BB* +
+cartKeyBB+ 2
+)BB2 3
+;BB3 4
+ifCC 
+(CC 
+cartCC 
+==CC 
+nullCC 
+)CC 
+{DD 
+throwEE 
+CartExceptionEE #
+.EE# $
+CartNotFoundEE$ 0
+;EE0 1
+}FF 
+varHH 
+itemHH 
+=HH 
+cartHH 
+.HH 
+	CartItemsHH %
+.HH% &
+FirstOrDefaultHH& 4
+(HH4 5
+iHH5 6
+=>HH7 9
+iHH: ;
+.HH; <
+ItemHH< @
+.HH@ A
+IdHHA C
+==HHD F
+itemIdHHG M
+)HHM N
+;HHN O
+ifII 
+(II 
+itemII 
+==II 
+nullII 
+)II 
+{JJ 
+returnKK 
+;KK 
+}LL 
+
+RemoveItemNN 
+(NN 
+itemNN 
+.NN 
+ItemNN  
+,NN  !
+quantityNN" *
+,NN* +
+cartNN, 0
+)NN0 1
+;NN1 2
+}OO 	
+publicQQ 
+voidQQ  
+UpdateItemsInBasketsQQ (
+(QQ( )
+intQQ) ,
+itemIdQQ- 3
+,QQ3 4
+stringQQ5 ;
+nameQQ< @
+,QQ@ A
+stringQQB H
+?QQH I
+descriptionQQJ U
+,QQU V
+stringQQW ]
+?QQ] ^
+imageUrlQQ_ g
+,QQg h
+decimalQQi p
+priceQQq v
+)QQv w
+{RR 	
+_repositorySS 
+.SS 
+UpdateBasketsItemsSS *
+(SS* +
+itemIdSS+ 1
+,SS1 2
+nameSS3 7
+,SS7 8
+descriptionSS9 D
+,SSD E
+imageUrlSSF N
+,SSN O
+priceSSP U
+)SSU V
+;SSV W
+}TT 	
+privateVV 
+voidVV 
+
+RemoveItemVV 
+(VV  
+ItemVV  $
+itemVV% )
+,VV) *
+intVV+ .
+quantityVV/ 7
+,VV7 8
+CartAggregateVV9 F
+cartVVG K
+)VVK L
+{WW 	
+cartXX 
+.XX 
+
+RemoveItemXX 
+(XX 
+itemXX  
+,XX  !
+quantityXX" *
+)XX* +
+;XX+ ,
+ifYY 
+(YY 
+cartYY 
+.YY 
+	CartItemsYY 
+.YY 
+AnyYY "
+(YY" #
+)YY# $
+)YY$ %
+{ZZ 
+_repository[[ 
+.[[ 
+
+UpdateCart[[ &
+([[& '
+cart[[' +
+)[[+ ,
+;[[, -
+}\\ 
+else]] 
+{^^ 
+_repository__ 
+.__ 
+
+RemoveCart__ &
+(__& '
+cart__' +
+)__+ ,
+;__, -
+}`` 
+}aa 	
+}bb 
+}cc Í	
+•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Validators\ItemValidator.cs
 	namespace 	
-CatalogService
+CartingService
  
 . 
 BusinessLayer &
@@ -1277,97 +1109,14 @@ UpdateItem@@ &
 
 Validators' 1
 { 
-internal 
-sealed 
-class 
-CategoryValidator +
-:, -
-AbstractValidator. ?
-<? @
-Category@ H
->H I
-{ 
-public 
-CategoryValidator  
-(  !
-)! "
-{		 	
-RuleFor
-
- 
-(
-
- 
-c
-
- 
-=>
-
- 
-c
-
- 
-.
-
- 
-Name
-
- 
-)
-
-  
-.
-
-  !
-NotEmpty
-
-! )
-(
-
-) *
-)
-
-* +
-.
-
-+ ,
-MaximumLength
-
-, 9
-(
-
-9 :
-$num
-
-: <
-)
-
-< =
-;
-
-= >
-} 	
-} 
-} 
-•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Validators\ItemValidator.cs
-	namespace 	
-CatalogService
- 
-. 
-BusinessLayer &
-.& '
-
-Validators' 1
-{ 
-internal 
-sealed 
-class 
-ItemValidator '
-:( )
-AbstractValidator* ;
-<; <
-Item< @
->@ A
+internal 
+class 
+ItemValidator  
+:! "
+AbstractValidator# 4
+<4 5
+Item5 9
+>9 :
 { 
 public 
 ItemValidator 
@@ -1410,37 +1159,22 @@ Validators' 1
 )
 
 * +
-.
-
-+ ,
-MaximumLength
-
-, 9
-(
-
-9 :
-$num
-
-: <
-)
-
-< =
 ;
 
-= >
++ ,
 RuleFor 
 ( 
 x 
 => 
 x 
-. 
-Category #
-)# $
-.$ %
-NotEmpty% -
-(- .
-). /
-;/ 0
+. 
+Id 
+) 
+. 
+NotEmpty '
+(' (
+)( )
+;) *
 RuleFor 
 ( 
 x 
@@ -1449,26 +1183,11 @@ Validators' 1
 . 
 Price  
 )  !
-.! " 
-GreaterThanOrEqualTo" 6
-(6 7
-$num7 8
-)8 9
-;9 :
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Amount !
-)! "
-." # 
-GreaterThanOrEqualTo# 7
-(7 8
-$num8 9
-)9 :
-;: ;
-} 	
-} 
-} 
+.! "
+NotEmpty" *
+(* +
+)+ ,
+;, -
+} 	
+} 
+} 

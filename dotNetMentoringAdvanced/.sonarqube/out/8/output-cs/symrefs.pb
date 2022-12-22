@@ -14,13 +14,13 @@
 õC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\ItemChangedListener.cs
 
  &
-) 8 -- (
+) 8 11 (
 1 ?  ($$" 0(
-* 4 33 55 
+* 4 77 99 
   )## $$> G2
-     !!= E$$ JJ (
- (    "KK 
- "CC LL 
+     !!= E$$ II (
+ (    "JJ 
+ "GG KK 
 3 A ,
 [ h *
 	{ ä (
@@ -32,16 +32,16 @@
 '': @
 ''X Y)) 
 )) **2 6
-** ++A HF
-++ ,, --1 8--= D--K R--` g--r y
-11 ,, 
-11) -55\ `
-99, >55I [
-99H O==" )>>: A
-AA &SS XX (
-AA, 5EE SS XX 
+** ++A HP
+++ ,, 00 111 811= D11K R11` g11r y
+55 00 
+55) -99\ `
+==, >99I [
+==H OAA" )BB: A
+EE &RR WW 
+EE, 5RR WW 
 
-VV ë
+UU ë
 ñC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\ListenerModule.cs
 
  &
@@ -58,14 +58,7 @@
 ûC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\MessagingConfiguration.cs
 
  0
-! 2
+! 2		 
+ 
 
- 
-  ƒ
-ùC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\RabbitMqConfiguration.cs
-
- (
-
- 
-
- 
+ 

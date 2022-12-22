@@ -3,4 +3,3 @@ C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-
 C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\ItemChangedListener.cs
 C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\ListenerModule.cs
 C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\MessagingConfiguration.cs
-C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.Listener\RabbitMqConfiguration.cs

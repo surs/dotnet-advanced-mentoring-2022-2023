@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>CatalogService.DataLayer</ProjectName>
+  <ProjectName>CartingService.DataLayer</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>e65042d0-d0f1-4b5f-95cc-92b1fcd788b6</ProjectGuid>
-  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.DataLayer\CatalogService.DataLayer.csproj</FullPath>
+  <ProjectGuid>9b9ddfee-3de6-466f-b61a-fa957fa20183</ProjectGuid>
+  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.DataLayer\CartingService.DataLayer.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\.sonarqube\conf\4\FilesToAnalyze.txt" />

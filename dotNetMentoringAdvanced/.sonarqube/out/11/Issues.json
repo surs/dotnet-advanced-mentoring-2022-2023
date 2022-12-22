@@ -12,48 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "CS0618",
-          "level": "warning",
-          "message": "'ApplicationInsightsExtensions.AddApplicationInsightsTelemetry(IServiceCollection, string)' is obsolete: 'InstrumentationKey based global ingestion is being deprecated. Use the AddApplicationInsightsTelemetry() overload which accepts Action<ApplicationInsightsServiceOptions> and set ApplicationInsightsServiceOptions.ConnectionString. See https://github.com/microsoft/ApplicationInsights-dotnet/issues/2560 for more details.'",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.API/Program.cs",
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 1,
-                  "endLine": 19,
-                  "endColumn": 113
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 2
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.API/Program.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 1,
-                  "endLine": 24,
-                  "endColumn": 9
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S101",
           "level": "warning",
           "message": "Rename class 'APIModule' to match pascal case naming rules, consider using 'ApiModule'.",
@@ -76,34 +34,6 @@
         }
       ],
       "rules": {
-        "CS0618": {
-          "id": "CS0618",
-          "shortDescription": "Type or member is obsolete",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0618)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8602": {
-          "id": "CS8602",
-          "shortDescription": "Dereference of a possibly null reference.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
         "S101": {
           "id": "S101",
           "shortDescription": "Types should be named in PascalCase",

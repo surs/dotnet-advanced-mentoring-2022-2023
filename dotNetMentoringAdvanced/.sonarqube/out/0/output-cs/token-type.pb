@@ -1,93 +1,58 @@
-ó
-†C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\BusinessLayerModule.cs
- 
- 
- 
- 	 
-   +		 		 		 (		? C		D V" 24 C" .0 ; ˚
-ûC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Entities\Category.cs
+Ó
+üC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\BusinesLayerModule.cs
  
  
  	 
-   # )0 3< D   "# +: => O°
-öC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Entities\Item.cs
- 
- 
- 	 
-    %, 2  ' .6 9		 		 		 "		# '		6 9		: GÓ
-´C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\EventArgs\ItemChangedEventArgs.cs
- 
- 	 
-  %/ 8  # &( +  % (* -ø
-®C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Exceptions\CatalogException.cs
+   *   (? CD V -8 F ∏
+£C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\CartAggregate.cs
  	 
-  !$ -   (= @A QR f   (9 <= MN ^    &1 :N R    &3 7  $ (¸
-´C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\ICategoryRepository.cs
- 
- 	 
-  (  !  		 		 %
+   &' +5 9: B   !- 1; >? CD L    ' *		 
 
- 
+ 
 
- $  €
-®C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\ICategoryService.cs
- 
- 	 
-  %     		 		 %
-
- 
-
- #
-
-* -
-
-5 =  $ *1 4= E  ¯
-ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\IItemRepository.cs
- 
- 	 
-  $    		 		 
-
- 
-
-   ˝
-§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Interfaces\IItemService.cs
+  $ (   '   #* -          0 1"" %%  $Å
+ûC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\CartItem.cs
+ 	 
+   !" &- 0˛
+õC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\Image.cs
+ 	 
+    %+ 1Ö
+öC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Entities\Item.cs
  
  
  	 
-  !   /		 		 
-
- 
-
-     " (7 :  &. 1    &- 3B E  &. 1: @P T  º
-•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Services\CategoryService.cs
+    !& ,3 8A H   "# '6 9: GÇ
+•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Exceptions\CartException.cs
  
- 
- 
- 	    ), <		 		 		 ,   2  $ ,% 5I Q    *+ 17 B   $ *1 4< D   '( ) !! !! !!# &## $$ && && &** ** ** ,, // // //$ '11 22 22  44 44 &77 :: :: ::# &::+ 1::8 ;::D L<< << << 'ö
+ 	 
+  ! *, 9   %6 9: GH X		 		 		 #		. 7		K O   #0 4  ! %Æ
+ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Interfaces\ICartingService.cs
+ 
+ 	 
+  $    $ (		 		 		) -		4 7
+
+ 
+
+  $
+
+. 2
+
+9 <   $. 1: = " %* 07 =L R^ eÃ
+ßC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Interfaces\ICartRepository.cs
+ 
+ 	 
+  $  "  %		 		! %
+
+ 
+
+ %     #, 29 ?N T` gÔ
 
-°C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Services\ItemService.cs
+§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Services\CartingService.cs
  
  
  
- 
- 	    %( 4
-
- 
-
- 
-
- (   !" 6   *    % 5I M    *+ 17 B    ") /> AJ R] dl o             !!! $$ $$ $$ "&& '' )) )) &-- -- -- // 22 22 22 44 55 55 77 77 &:: == == == "==' -==4 :==I L==U ]==h o==w z
-==É â
-==ô ù?? ?? ?? AA" &AA( +AA, @Œ
-©C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Validators\CategoryValidator.cs
+ 	    (+ :		 		 		 (   -  " &0 4; >     '( M% 5I M    '( .4 ?   && && && #++ ++ ++ +++ /-- .. .. 00 00 #22 55 55 55' +555 955@ C77 88 88 :: :: #@@ @@ @@' +@@5 8@@A DBB CC CC EE EE #HH II II KK QQ QQ QQ) ,QQ5 ;QQB HQQW ]QQi pVV VV VV  $VV+ .VV9 FYY ]] Æ
+•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\Validators\ItemValidator.cs
  
  
- 	    +. ?@ H   
-
-: <Ê
-•C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.BusinessLayer\Validators\ItemValidator.cs
- 
- 
- 	    '* ;< @  
-
-: <7 88 9
+ 	    # 45 9  

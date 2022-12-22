@@ -4,12 +4,13 @@
 ÜC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Program.cs	 8jr.	
  !#$%&'()*+,-./012456789:;<xÇ %&'+,0579Ù
 £C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\AccountController.cs^ 
-8;j_-.789=BIJKPSXYZ]`aipvwÇéèìó¢´±≤≥∑ºΩƒ≈∆À–”◊⁄€‹ﬂÓ˜∏¿≈∆Ã‚„‰r¢	
- !"#$&'()*+,/12345:;<>@ACDFGLMNOQTUVW[^_bcefghjklnoqrstxyz{|}~ÄÉÑÖÜàäãåçêëîïòôöõúùûü†°£§•ß®©¨≠Æ¥µ∂∏∫ªæø¡¬«»… ÃŒœ—‘’ÿŸ›‡·„‰ÊÁËÈÍÒÚÛÙı¯˘˙˚¸˝ˇÄÅÇÑÖáâäãåçéèëíìîïñóôöõúùû†°¢£§•¶ß®™´¨≠ÆØ∞≤≥¥∂∑π∫ªΩæø¡¬√«» ÀÕœ–—“”‘’÷ÿŸ⁄€‹›ﬁﬂ‡·ÂÊËÈÍÎÌÓÔx:Ç∫/1234>@CFQTV[^bejnqsty{~ÄÉÖàäåêîòöúû£ß®¨≠∏∫æ¡ÃŒ—‘ÿ›‡„ÈÚÛı¸ˇÅÑáâäãçéíîïóôõ†¢£•¶¨≠ÆØ¥∂π∫Ωæ¡¬«Õ—“”‘ÿ⁄€›ﬁ‡ÂËÌ∏
+8;j_-.789=BIJKPSXYZ]`aipvwÇéèìó¢´∞±≤∂ªº√ƒ≈ œ“÷Ÿ⁄€ﬁÌˆ∑øƒ≈À·‚„r¢	
+ !"#$&'()*+,/12345:;<>@ACDFGLMNOQTUVW[^_bcefghjklnoqrstxyz{|}~ÄÉÑÖÜàäãåçêëîïòôöõúùûü†°£§•ß®©¨≠Æ≥¥µ∑π∫Ωæ¿¡∆«»…ÀÕŒ–”‘◊ÿ‹ﬂ‡‚„ÂÊÁËÈÔÒÚÛÙ˜¯˘˙˚¸˛ˇÄÅÉÑÜàâäãåçéêëíìîïñòôöõúùü†°¢£§•¶ß©™´¨≠ÆØ±≤≥µ∂∏π∫ºΩæ¿¡¬∆«… ÃŒœ–—“”‘’◊ÿŸ⁄€‹›ﬁﬂ‡‰ÂÁËÈÍÏÌÓÔx:Ç∫/1234>@CFQTV[^bejnqsty{~ÄÉÖàäåêîòöúû£ß®¨≠∑πΩ¿ÀÕ–”◊‹ﬂ‚ËÒÚÙ˚˛ÄÉÜàâäåçëìîñòöü°¢§•´¨≠Æ≥µ∏πºΩ¿¡∆Ã–—“”◊Ÿ⁄‹›ﬂ‰ÁÏ∏
 †C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\AccountOptions.csr	
-Ç·
-§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\ExternalController.cs1 8j0%&/017:>MNOS`defjklq{~Åâäñóòù§∞±¥µºr±	
- !"#$')*+,-234589;<?@ABCDEFGIKPQRTUVWXZ[\]^abcghmnorstuvwy|ÇÉÖÜáàãåçèêíìîôöõûü°¢•ß®™´¨≠Æ≤≥∂∑∏π∫Ωæø¿¡¬√ƒxÇG')*+,58;AITUWZ\]abgorty|ÇÉÖáãèîôöûü°¢•ß¨≠∂∑πΩæ¿µ
+ÇŸ
+§C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\ExternalController.cs0 8j0%&/017:>MNOS`defjklq{~Åáàìîïö°≠Æ±≤πr´	
+ !"#$')*+,-234589;<?@ABCDEFGIKPQRTUVWXZ[\]^abcghmnorstuvwy|ÇÉÖÜâäåçèêëñóòõúûü¢§•ß®©™´Ø∞≥¥µ∂∑∫ªºΩæø¿¡x
+ÇE')*+,58;AITUWZ\]abgorty|ÇÉÖâåëñóõúûü¢§©™≥¥∂∫ªΩµ
 ¢C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\ExternalProvider.cs 8r	
 º
 §C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Account\LoggedOutViewModel.cs 8r	
@@ -41,10 +42,9 @@ r
 ÆC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Device\DeviceAuthorizationInputModel.cs 8r	
 ¿
 ≠C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Device\DeviceAuthorizationViewModel.cs 8r	
-÷
-°C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Device\DeviceController.csA 
-8(jX]`csÇÖã‘rñ	
- !"#$%&'()+,-./0235679:;<=>@ACDEFGIJLMOPQSTVYZ[^_abdefghijlmnopqtuvwxyz{|}~ÄÅÉÜáàâäåçèêíìîïñóòöõùûü†°¢§•ß®©™´≠Ø∞±≤≥¥µ∂∑∏π∫ªºΩø¿¬√ƒ≈∆«»… ÀÃÕœ–—“”’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËxÇ}%&'(./02356=>@GIJLSTY[^adfgilnoptx}ÄÉÜáåèîïóö¢§•ß®©™≠∞≤≥µ∂πªΩøƒ∆«»… À—”’÷◊ÿŸﬁ‡·‚Ÿ
+
+°C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Device\DeviceController.csB 8)jchkn~çêñﬂr™	
+ !"#$%&'()+,-./0235679:;<=>@ACDEFGHIJLMOPQRSTUWXZ[\^_adefijlmopqrstuwxyz{|ÄÅÇÉÑÖÜáàâãåéëíìîïóòöõùûü†°¢£•¶®©™´¨≠Ø∞≤≥¥µ∂∏∫ªºΩæø¿¡¬√ƒ≈∆«» ÀÕŒœ–—“”‘’÷◊ÿ⁄€‹›ﬁ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛxÇÇ%&'(./02356=>@GILQRTW^_dfiloqrtwyz{Éàãéëíóöü†¢•≠Ø∞≤≥¥µ∏ªΩæ¿¡ƒ∆» œ—“”‘’÷‹ﬁ‡·‚„‰ÈÎÏÌŸ
 ´C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Diagnostics\DiagnosticsController.cs 8r	xÇ⁄
 ™C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Diagnostics\DiagnosticsViewModel.cs 8r	 xÇ≈
 îC:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\IdentityServer\Quickstart\Extensions.cs 8j	

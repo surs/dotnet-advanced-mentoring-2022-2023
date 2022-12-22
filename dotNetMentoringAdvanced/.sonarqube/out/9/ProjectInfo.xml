@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>CatalogService.API</ProjectName>
+  <ProjectName>CatalogService.ConsoleInterface</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>151e7c49-05e0-4304-86ea-88e004a1acfc</ProjectGuid>
-  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.API\CatalogService.API.csproj</FullPath>
+  <ProjectGuid>8ff12800-f5ab-49fd-ba5d-840c0a487e41</ProjectGuid>
+  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CatalogService.ConsoleInterface\CatalogService.ConsoleInterface.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\.sonarqube\conf\9\FilesToAnalyze.txt" />

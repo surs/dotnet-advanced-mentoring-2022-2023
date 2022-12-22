@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>CartingService.BusinessLayer</ProjectName>
+  <ProjectName>dotNetMentoringAdvancedApiGateway</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>51a8534c-c93e-46e6-8652-7660309e1515</ProjectGuid>
-  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\CartingService.BusinessLayer\CartingService.BusinessLayer.csproj</FullPath>
+  <ProjectGuid>e293e17b-83dc-4df8-bcd5-6c6af8fc8658</ProjectGuid>
+  <FullPath>C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\dotNetMentoringAdvancedApiGateway\dotNetMentoringAdvancedApiGateway.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\workspace\dotNet mentoring advanced 2022\repo\dotnet-advanced-mentoring-2022-2023\dotNetMentoringAdvanced\.sonarqube\conf\1\FilesToAnalyze.txt" />

@@ -12,52 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable event 'OnItemChanged' must contain a non-null value when exiting constructor. Consider declaring the event as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Services/ItemService.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 16,
-                  "endLine": 14,
-                  "endColumn": 27
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Services/ItemService.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 57,
-                  "endLine": 12,
-                  "endColumn": 70
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S3925",
           "level": "warning",
           "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 3,
+                  "startLine": 5,
                   "startColumn": 18,
-                  "endLine": 3,
-                  "endColumn": 34
+                  "endLine": 5,
+                  "endColumn": 31
                 }
               }
             }
@@ -65,22 +31,22 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 3,
+                  "startLine": 5,
                   "startColumn": 12,
-                  "endLine": 3,
+                  "endLine": 5,
                   "endColumn": 17
                 }
               }
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 3,
+                  "startLine": 5,
                   "startColumn": 12,
-                  "endLine": 3,
+                  "endLine": 5,
                   "endColumn": 17
                 }
               }
@@ -89,24 +55,48 @@
           "properties": {
             "warningLevel": 1,
             "customProperties": {
-              "0": "Add 'System.SerializableAttribute' attribute on 'CatalogException' because it implements 'ISerializable'.",
-              "1": "Add a 'protected' constructor 'CatalogException(SerializationInfo, StreamingContext)'."
+              "0": "Add 'System.SerializableAttribute' attribute on 'CartException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'CartException(SerializationInfo, StreamingContext)'."
             }
           }
         },
         {
-          "ruleId": "S107",
+          "ruleId": "S1939",
           "level": "warning",
-          "message": "Method has 8 parameters, which is greater than the 7 authorized.",
+          "message": "'Exception' implements 'ISerializable' so 'ISerializable' can be removed from the inheritance list.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Interfaces/IItemService.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Exceptions/CartException.cs",
                 "region": {
-                  "startLine": 14,
-                  "startColumn": 24,
-                  "endLine": 15,
-                  "endColumn": 86
+                  "startLine": 5,
+                  "startColumn": 43,
+                  "endLine": 5,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "redundantIndex": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'itemId' to 'id' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CartingService.BusinessLayer/Services/CartingService.cs",
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 46,
+                  "endLine": 81,
+                  "endColumn": 52
                 }
               }
             }
@@ -117,29 +107,15 @@
         }
       ],
       "rules": {
-        "CS8618": {
-          "id": "CS8618",
-          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.",
+        "S1939": {
+          "id": "S1939",
+          "shortDescription": "Inheritance list should not be redundant",
+          "fullDescription": "An inheritance list entry is redundant if:",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1939",
           "properties": {
-            "category": "Compiler",
+            "category": "Minor Code Smell",
             "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "S107": {
-          "id": "S107",
-          "shortDescription": "Methods should not have too many parameters",
-          "fullDescription": "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-107",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": false,
             "tags": [
               "C#",
               "MainSourceScope",
@@ -160,6 +136,23 @@
             "tags": [
               "C#",
               "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "The name of a parameter in an externally visible. This rule raises an issue when method override does not match the name of the parameter in the base declaration of the method, or the name of the parameter in the interface declaration of the method or the name of any other partial definition.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
               "SonarWay"
             ]
           }

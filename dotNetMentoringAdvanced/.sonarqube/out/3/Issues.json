@@ -12,39 +12,148 @@
       },
       "results": [
         {
-          "ruleId": "CS0618",
+          "ruleId": "S3925",
           "level": "warning",
-          "message": "'ApplicationInsightsExtensions.AddApplicationInsightsTelemetry(IServiceCollection, string)' is obsolete: 'InstrumentationKey based global ingestion is being deprecated. Use the AddApplicationInsightsTelemetry() overload which accepts Action<ApplicationInsightsServiceOptions> and set ApplicationInsightsServiceOptions.ConnectionString. See https://github.com/microsoft/ApplicationInsights-dotnet/issues/2560 for more details.'",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/dotNetMentoringAdvancedApiGateway/Program.cs",
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
                 "region": {
-                  "startLine": 33,
-                  "startColumn": 1,
-                  "endLine": 33,
-                  "endColumn": 113
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 12,
+                  "endLine": 5,
+                  "endColumn": 17
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 2
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'CatalogException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'CatalogException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S1939",
+          "level": "warning",
+          "message": "'Exception' implements 'ISerializable' so 'ISerializable' can be removed from the inheritance list.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Exceptions/CatalogException.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 46,
+                  "endLine": 5,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "redundantIndex": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S107",
+          "level": "warning",
+          "message": "Method has 8 parameters, which is greater than the 7 authorized.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/workspace/dotNet%20mentoring%20advanced%202022/repo/dotnet-advanced-mentoring-2022-2023/dotNetMentoringAdvanced/CatalogService.BusinessLayer/Interfaces/IItemService.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 86
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
           }
         }
       ],
       "rules": {
-        "CS0618": {
-          "id": "CS0618",
-          "shortDescription": "Type or member is obsolete",
+        "S107": {
+          "id": "S107",
+          "shortDescription": "Methods should not have too many parameters",
+          "fullDescription": "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0618)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-107",
           "properties": {
-            "category": "Compiler",
+            "category": "Major Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1939": {
+          "id": "S1939",
+          "shortDescription": "Inheritance list should not be redundant",
+          "fullDescription": "An inheritance list entry is redundant if:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1939",
+          "properties": {
+            "category": "Minor Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "Compiler",
-              "Telemetry"
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3925": {
+          "id": "S3925",
+          "shortDescription": "\"ISerializable\" should be implemented correctly",
+          "fullDescription": "The ISerializable interface is the mechanism to control the type serialization process. If not implemented correctly this could result in an invalid serialization and hard to detect bugs.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3925",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }
