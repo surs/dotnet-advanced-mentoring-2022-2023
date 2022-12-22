@@ -9,8 +9,8 @@ namespace CatalogService.DataLayer
     {
         private readonly string _connectionString;
 
-        public DbSet<Category>? Categories { get; set; }
-        public DbSet<Item>? Items { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         public CatalogContext(IConfiguration configuration)
         {

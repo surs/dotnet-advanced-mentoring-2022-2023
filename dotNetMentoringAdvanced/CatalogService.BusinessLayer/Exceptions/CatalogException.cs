@@ -3,7 +3,7 @@
 namespace CatalogService.BusinessLayer.Exceptions
 {
     [Serializable]
-    public class CatalogException : Exception, ISerializable
+    public class CatalogException : Exception
     {
         internal static CatalogException CategoryNotFound => new CatalogException("Category not found");
         internal static CatalogException ItemNotFound => new CatalogException("Item not found");
@@ -23,9 +23,9 @@ namespace CatalogService.BusinessLayer.Exceptions
 
         }
 
-        public CatalogException(SerializationInfo info, StreamingContext context)
+        private CatalogException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-            base.GetObjectData(info, context);
+
         }
 
     }

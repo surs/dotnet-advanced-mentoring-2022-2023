@@ -22,9 +22,9 @@ namespace CartingService.BusinessLayer.Exceptions
 
         }
 
-        public CartException(SerializationInfo info, StreamingContext context)
+        private CartException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-            base.GetObjectData(info, context);
+
         }
     }
 }
