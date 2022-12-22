@@ -2,7 +2,8 @@
 
 namespace CartingService.BusinessLayer.Exceptions
 {
-    public class CartException : Exception, ISerializable
+    [Serializable]
+    public sealed class CartException : Exception
     {
         internal static CartException CartNotFound => new CartException("Cart not found");
 
@@ -21,5 +22,9 @@ namespace CartingService.BusinessLayer.Exceptions
 
         }
 
+        public CartException(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+        }
     }
 }

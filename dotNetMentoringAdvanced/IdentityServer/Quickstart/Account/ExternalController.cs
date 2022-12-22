@@ -84,7 +84,7 @@ namespace IdentityServerHost.Quickstart.UI
             var result = await HttpContext.AuthenticateAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme);
             if (result?.Succeeded != true)
             {
-                throw new ApplicationException("External authentication error");
+                throw new Exception("External authentication error");
             }
 
             if (_logger.IsEnabled(LogLevel.Debug))
